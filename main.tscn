@@ -1,0 +1,860 @@
+[gd_scene load_steps=187 format=2]
+
+[ext_resource path="res://Models/stone_smallB.glb" type="PackedScene" id=1]
+[ext_resource path="res://Models/stone_tallA.glb" type="PackedScene" id=2]
+[ext_resource path="res://Models/tree_blocks.glb" type="PackedScene" id=3]
+[ext_resource path="res://Models/tree_palmBend.glb" type="PackedScene" id=4]
+[ext_resource path="res://Models/tree_oak_dark.glb" type="PackedScene" id=5]
+[ext_resource path="res://Models/tree_pineRoundC.glb" type="PackedScene" id=6]
+[ext_resource path="res://Models/tree_tall.glb" type="PackedScene" id=7]
+[ext_resource path="res://Models/tree_pineSmallD.glb" type="PackedScene" id=8]
+[ext_resource path="res://Models/tree_pineTallC.glb" type="PackedScene" id=9]
+[ext_resource path="res://Models/tree_pineTallD_detailed.glb" type="PackedScene" id=10]
+[ext_resource path="res://Models/stone_smallA.glb" type="PackedScene" id=11]
+[ext_resource path="res://Models/stone_largeF.glb" type="PackedScene" id=12]
+[ext_resource path="res://Models/tree_pineSmallA.glb" type="PackedScene" id=13]
+[ext_resource path="res://Models/tree_small_fall.glb" type="PackedScene" id=14]
+[ext_resource path="res://Models/tree_detailed.glb" type="PackedScene" id=15]
+[ext_resource path="res://Models/tree_thin_fall.glb" type="PackedScene" id=16]
+[ext_resource path="res://Models/stone_smallTopB.glb" type="PackedScene" id=17]
+[ext_resource path="res://Models/stone_tallJ.glb" type="PackedScene" id=18]
+[ext_resource path="res://Models/tree_pineDefaultB.glb" type="PackedScene" id=19]
+[ext_resource path="res://Models/tree_cone_dark.glb" type="PackedScene" id=20]
+[ext_resource path="res://Models/stone_tallG.glb" type="PackedScene" id=21]
+[ext_resource path="res://Models/tree_blocks_dark.glb" type="PackedScene" id=22]
+[ext_resource path="res://Models/stone_tallC.glb" type="PackedScene" id=23]
+[ext_resource path="res://Models/stone_tallH.glb" type="PackedScene" id=24]
+[ext_resource path="res://Models/stone_tallF.glb" type="PackedScene" id=25]
+[ext_resource path="res://Models/stone_smallI.glb" type="PackedScene" id=26]
+[ext_resource path="res://Models/tree_cone_fall.glb" type="PackedScene" id=27]
+[ext_resource path="res://Models/tree_palmTall.glb" type="PackedScene" id=28]
+[ext_resource path="res://Models/tree_default_fall.glb" type="PackedScene" id=29]
+[ext_resource path="res://Models/tree_thin_dark.glb" type="PackedScene" id=30]
+[ext_resource path="res://Models/tree_palmDetailedShort.glb" type="PackedScene" id=31]
+[ext_resource path="res://Models/tree_palmShort.glb" type="PackedScene" id=32]
+[ext_resource path="res://Models/stone_tallI.glb" type="PackedScene" id=33]
+[ext_resource path="res://Models/tree_pineGroundB.glb" type="PackedScene" id=34]
+[ext_resource path="res://Models/tree_pineTallA.glb" type="PackedScene" id=35]
+[ext_resource path="res://Models/stone_tallE.glb" type="PackedScene" id=36]
+[ext_resource path="res://Models/stone_tallD.glb" type="PackedScene" id=37]
+[ext_resource path="res://Models/tree_default.glb" type="PackedScene" id=38]
+[ext_resource path="res://Models/tree_blocks_fall.glb" type="PackedScene" id=39]
+[ext_resource path="res://Models/tree_detailed_dark.glb" type="PackedScene" id=40]
+[ext_resource path="res://Models/tree_pineDefaultA.glb" type="PackedScene" id=41]
+[ext_resource path="res://Models/tree_pineGroundA.glb" type="PackedScene" id=42]
+[ext_resource path="res://Models/tree_pineRoundD.glb" type="PackedScene" id=43]
+[ext_resource path="res://Models/tree_pineRoundE.glb" type="PackedScene" id=44]
+[ext_resource path="res://Models/tree_pineRoundF.glb" type="PackedScene" id=45]
+[ext_resource path="res://Models/tree_pineTallB.glb" type="PackedScene" id=46]
+[ext_resource path="res://Models/stone_tallB.glb" type="PackedScene" id=47]
+[ext_resource path="res://Models/tree_default_dark.glb" type="PackedScene" id=48]
+[ext_resource path="res://Models/tree_pineRoundB.glb" type="PackedScene" id=49]
+[ext_resource path="res://Models/tree_detailed_fall.glb" type="PackedScene" id=50]
+[ext_resource path="res://Models/tree_fat.glb" type="PackedScene" id=51]
+[ext_resource path="res://Models/tree_oak.glb" type="PackedScene" id=52]
+[ext_resource path="res://Models/tree_pineSmallB.glb" type="PackedScene" id=53]
+[ext_resource path="res://Models/tree_pineRoundA.glb" type="PackedScene" id=54]
+[ext_resource path="res://Models/tree_small_dark.glb" type="PackedScene" id=55]
+[ext_resource path="res://Models/tree_pineSmallC.glb" type="PackedScene" id=56]
+[ext_resource path="res://Models/tree_pineTallA_detailed.glb" type="PackedScene" id=57]
+[ext_resource path="res://Models/tree_pineTallB_detailed.glb" type="PackedScene" id=58]
+[ext_resource path="res://Models/tree_pineTallC_detailed.glb" type="PackedScene" id=59]
+[ext_resource path="res://Models/tree_tall_dark.glb" type="PackedScene" id=60]
+[ext_resource path="res://Models/tree_palmDetailedTall.glb" type="PackedScene" id=61]
+[ext_resource path="res://Models/tree_pineTallD.glb" type="PackedScene" id=62]
+[ext_resource path="res://Models/stone_smallTopA.glb" type="PackedScene" id=63]
+[ext_resource path="res://Models/tree_tall_fall.glb" type="PackedScene" id=64]
+[ext_resource path="res://Models/stone_largeE.glb" type="PackedScene" id=65]
+[ext_resource path="res://Models/statue_ring.glb" type="PackedScene" id=66]
+[ext_resource path="res://Models/pot_small.glb" type="PackedScene" id=67]
+[ext_resource path="res://Models/pot_large.glb" type="PackedScene" id=68]
+[ext_resource path="res://Models/statue_block.glb" type="PackedScene" id=69]
+[ext_resource path="res://Models/statue_columnDamaged.glb" type="PackedScene" id=70]
+[ext_resource path="res://tent_detailedOpen.tscn" type="PackedScene" id=71]
+[ext_resource path="res://Models/tree_simple_dark.glb" type="PackedScene" id=72]
+[ext_resource path="res://Models/tree_simple_fall.glb" type="PackedScene" id=73]
+[ext_resource path="res://Models/statue_obelisk.glb" type="PackedScene" id=74]
+[ext_resource path="res://Models/tree_plateau_fall.glb" type="PackedScene" id=75]
+[ext_resource path="res://Models/tree_small.glb" type="PackedScene" id=76]
+[ext_resource path="res://Models/tree_cone.glb" type="PackedScene" id=77]
+[ext_resource path="res://Models/tree_simple.glb" type="PackedScene" id=78]
+[ext_resource path="res://Models/tree_palm.glb" type="PackedScene" id=79]
+[ext_resource path="res://Models/statue_head.glb" type="PackedScene" id=80]
+[ext_resource path="res://Models/tree_plateau.glb" type="PackedScene" id=81]
+[ext_resource path="res://Models/tree_plateau_dark.glb" type="PackedScene" id=82]
+[ext_resource path="res://Models/crops_cornStageD.glb" type="PackedScene" id=83]
+[ext_resource path="res://Models/crops_cornStageB.glb" type="PackedScene" id=84]
+[ext_resource path="res://Models/crops_cornStageC.glb" type="PackedScene" id=85]
+[ext_resource path="res://Models/crops_wheatStageA.glb" type="PackedScene" id=86]
+[ext_resource path="res://Models/crop_carrot.glb" type="PackedScene" id=87]
+[ext_resource path="res://Models/crop_melon.glb" type="PackedScene" id=88]
+[ext_resource path="res://Models/crop_pumpkin.glb" type="PackedScene" id=89]
+[ext_resource path="res://Models/fence_bend.glb" type="PackedScene" id=90]
+[ext_resource path="res://Models/flower_purpleA.glb" type="PackedScene" id=91]
+[ext_resource path="res://Models/flower_purpleB.glb" type="PackedScene" id=92]
+[ext_resource path="res://Models/canoe.glb" type="PackedScene" id=93]
+[ext_resource path="res://Models/crops_wheatStageB.glb" type="PackedScene" id=94]
+[ext_resource path="res://Models/flower_purpleC.glb" type="PackedScene" id=95]
+[ext_resource path="res://Models/flower_redA.glb" type="PackedScene" id=96]
+[ext_resource path="res://Models/flower_redB.glb" type="PackedScene" id=97]
+[ext_resource path="res://Models/flower_redC.glb" type="PackedScene" id=98]
+[ext_resource path="res://Models/crops_leafsStageA.glb" type="PackedScene" id=99]
+[ext_resource path="res://Models/crops_leafsStageB.glb" type="PackedScene" id=100]
+[ext_resource path="res://Models/crop_turnip.glb" type="PackedScene" id=101]
+[ext_resource path="res://Models/flower_yellowA.glb" type="PackedScene" id=102]
+[ext_resource path="res://Models/flower_yellowB.glb" type="PackedScene" id=103]
+[ext_resource path="res://Models/grass_leafsLarge.glb" type="PackedScene" id=104]
+[ext_resource path="res://Models/hanging_moss.glb" type="PackedScene" id=105]
+[ext_resource path="res://Models/lily_small.glb" type="PackedScene" id=106]
+[ext_resource path="res://Models/grass.glb" type="PackedScene" id=107]
+[ext_resource path="res://Models/log.glb" type="PackedScene" id=108]
+[ext_resource path="res://Models/grass_large.glb" type="PackedScene" id=109]
+[ext_resource path="res://Models/flower_yellowC.glb" type="PackedScene" id=110]
+[ext_resource path="res://Models/grass_leafs.glb" type="PackedScene" id=111]
+[ext_resource path="res://Models/log_large.glb" type="PackedScene" id=112]
+[ext_resource path="res://Models/rock_largeA.glb" type="PackedScene" id=113]
+[ext_resource path="res://Models/lily_large.glb" type="PackedScene" id=114]
+[ext_resource path="res://Models/rock_tallC.glb" type="PackedScene" id=115]
+[ext_resource path="res://Models/rock_largeF.glb" type="PackedScene" id=116]
+[ext_resource path="res://Models/rock_smallC.glb" type="PackedScene" id=117]
+[ext_resource path="res://Models/rock_smallFlatA.glb" type="PackedScene" id=118]
+[ext_resource path="res://Models/rock_tallG.glb" type="PackedScene" id=119]
+[ext_resource path="res://Models/rock_tallI.glb" type="PackedScene" id=120]
+[ext_resource path="res://Models/rock_smallTopB.glb" type="PackedScene" id=121]
+[ext_resource path="res://Models/rock_tallF.glb" type="PackedScene" id=122]
+[ext_resource path="res://Models/rock_smallI.glb" type="PackedScene" id=123]
+[ext_resource path="res://Models/rock_smallTopA.glb" type="PackedScene" id=124]
+[ext_resource path="res://Models/rock_smallG.glb" type="PackedScene" id=125]
+[ext_resource path="res://Models/rock_tallH.glb" type="PackedScene" id=126]
+[ext_resource path="res://Models/rock_largeB.glb" type="PackedScene" id=127]
+[ext_resource path="res://Models/rock_smallB.glb" type="PackedScene" id=128]
+[ext_resource path="res://Models/rock_smallD.glb" type="PackedScene" id=129]
+[ext_resource path="res://Models/rock_tallE.glb" type="PackedScene" id=130]
+[ext_resource path="res://Models/rock_largeC.glb" type="PackedScene" id=131]
+[ext_resource path="res://Models/rock_largeE.glb" type="PackedScene" id=132]
+[ext_resource path="res://Models/rock_tallA.glb" type="PackedScene" id=133]
+[ext_resource path="res://Models/sign.glb" type="PackedScene" id=134]
+[ext_resource path="res://Models/rock_tallD.glb" type="PackedScene" id=135]
+[ext_resource path="res://Models/rock_smallFlatB.glb" type="PackedScene" id=136]
+[ext_resource path="res://Models/rock_smallA.glb" type="PackedScene" id=137]
+[ext_resource path="res://Models/rock_tallJ.glb" type="PackedScene" id=138]
+[ext_resource path="res://Models/rock_tallB.glb" type="PackedScene" id=139]
+[ext_resource path="res://Models/rock_smallFlatC.glb" type="PackedScene" id=140]
+[ext_resource path="res://Models/rock_largeD.glb" type="PackedScene" id=141]
+[ext_resource path="res://Models/rock_smallH.glb" type="PackedScene" id=142]
+[ext_resource path="res://Models/platform_beach.glb" type="PackedScene" id=143]
+[ext_resource path="res://Models/cactus_tall.glb" type="PackedScene" id=144]
+[ext_resource path="res://Models/stump_old.glb" type="PackedScene" id=145]
+[ext_resource path="res://Models/stump_oldTall.glb" type="PackedScene" id=146]
+[ext_resource path="res://Models/campfire_bricks.glb" type="PackedScene" id=147]
+[ext_resource path="res://Models/path_stone.glb" type="PackedScene" id=148]
+[ext_resource path="res://Models/path_wood.glb" type="PackedScene" id=149]
+[ext_resource path="res://Models/plant_bushDetailed.glb" type="PackedScene" id=150]
+[ext_resource path="res://Models/plant_bushSmall.glb" type="PackedScene" id=151]
+[ext_resource path="res://Models/plant_bushTriangle.glb" type="PackedScene" id=152]
+[ext_resource path="res://Models/stump_round.glb" type="PackedScene" id=153]
+[ext_resource path="res://Models/path_stoneCorner.glb" type="PackedScene" id=154]
+[ext_resource path="res://Models/plant_bushLarge.glb" type="PackedScene" id=155]
+[ext_resource path="res://Models/log_stack.glb" type="PackedScene" id=156]
+[ext_resource path="res://Models/log_stackLarge.glb" type="PackedScene" id=157]
+[ext_resource path="res://Models/mushroom_redTall.glb" type="PackedScene" id=158]
+[ext_resource path="res://Models/mushroom_tanTall.glb" type="PackedScene" id=159]
+[ext_resource path="res://Models/mushroom_tanGroup.glb" type="PackedScene" id=160]
+[ext_resource path="res://Models/fence_bendCenter.glb" type="PackedScene" id=161]
+[ext_resource path="res://Models/campfire_stones.glb" type="PackedScene" id=162]
+[ext_resource path="res://Models/crops_bambooStageA.glb" type="PackedScene" id=163]
+[ext_resource path="res://Models/campfire_logs.glb" type="PackedScene" id=164]
+[ext_resource path="res://Models/crops_cornStageA.glb" type="PackedScene" id=165]
+[ext_resource path="res://Models/canoe_paddle.glb" type="PackedScene" id=166]
+[ext_resource path="res://Models/mushroom_red.glb" type="PackedScene" id=167]
+[ext_resource path="res://Models/mushroom_tan.glb" type="PackedScene" id=168]
+[ext_resource path="res://Models/cactus_short.glb" type="PackedScene" id=169]
+[ext_resource path="res://Models/path_stoneCircle.glb" type="PackedScene" id=170]
+[ext_resource path="res://Models/path_stoneEnd.glb" type="PackedScene" id=171]
+[ext_resource path="res://Models/crops_bambooStageB.glb" type="PackedScene" id=172]
+[ext_resource path="res://Models/plant_bush.glb" type="PackedScene" id=173]
+[ext_resource path="res://Models/mushroom_redGroup.glb" type="PackedScene" id=174]
+[ext_resource path="res://Models/plant_bushLargeTriangle.glb" type="PackedScene" id=175]
+[ext_resource path="res://Models/campfire_planks.glb" type="PackedScene" id=176]
+[ext_resource path="res://Models/path_woodEnd.glb" type="PackedScene" id=177]
+[ext_resource path="res://Models/plant_flatShort.glb" type="PackedScene" id=178]
+[ext_resource path="res://Models/plant_flatTall.glb" type="PackedScene" id=179]
+[ext_resource path="res://Models/stump_squareDetailedWide.glb" type="PackedScene" id=180]
+[ext_resource path="res://Models/stump_squareDetailed.glb" type="PackedScene" id=181]
+[ext_resource path="res://Models/stump_roundDetailed.glb" type="PackedScene" id=182]
+[ext_resource path="res://Models/stump_square.glb" type="PackedScene" id=183]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.0588235, 0.917647, 0.513726, 1 )
+
+[sub_resource type="PlaneMesh" id=2]
+material = SubResource( 1 )
+size = Vector2( 10, 10 )
+
+[sub_resource type="CubeMesh" id=3]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00455171, -0.00655192, 0.00154144 )
+use_in_baked_light = true
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="statue_obelisk" parent="MeshInstance" instance=ExtResource( 74 )]
+transform = Transform( 4.00361, 0, 0, 0, 4.55333, 0, 0, 0, 4.8429, 1.32751, 0.0500005, -4.42804 )
+
+[node name="statue_head" parent="MeshInstance/statue_obelisk" instance=ExtResource( 80 )]
+transform = Transform( -0.551617, 0, -1.00895, 0, 1, 0, 0.689545, 0, -0.551617, -0.747643, 0.0188884, 0.349908 )
+
+[node name="statue_head2" parent="MeshInstance/statue_obelisk" instance=ExtResource( 80 )]
+transform = Transform( -0.611071, 0, 0.957518, 0, 1, 0, -0.654392, 0, -0.611071, 0.648724, 0.0188884, 0.472404 )
+
+[node name="canoe_paddle" parent="MeshInstance" instance=ExtResource( 166 )]
+transform = Transform( 0.935549, -0.0201776, 0.35262, 0.353197, 0.0534463, -0.934021, 0, 0.998367, 0.0571283, 0.0669963, 0.226703, -0.856196 )
+
+[node name="cactus_short" parent="MeshInstance" instance=ExtResource( 169 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.202417, 0.05, 2.15614 )
+
+[node name="cactus_tall" parent="MeshInstance" instance=ExtResource( 144 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.373464, 0.0500003, 0.296109 )
+
+[node name="campfire_bricks" parent="MeshInstance" instance=ExtResource( 147 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24768, 0.05, 1.99872 )
+
+[node name="campfire_planks" parent="MeshInstance" instance=ExtResource( 176 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24644, 0.0500002, 1.9942 )
+
+[node name="campfire_stones" parent="MeshInstance/campfire_planks" instance=ExtResource( 162 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435111, -2.38419e-07, -0.314234 )
+
+[node name="campfire_logs" parent="MeshInstance/campfire_planks" instance=ExtResource( 164 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.457516, -3.57628e-07, -0.31798 )
+
+[node name="crops_bambooStageA" parent="MeshInstance" instance=ExtResource( 163 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53916, 0.05, 2.30826 )
+
+[node name="crops_bambooStageB" parent="MeshInstance/crops_bambooStageA" instance=ExtResource( 172 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.87715, 0, -0.468948 )
+
+[node name="crops_cornStageA" parent="MeshInstance/crops_bambooStageA" instance=ExtResource( 165 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.34301, 2.38419e-07, -0.298543 )
+
+[node name="fence_bendCenter" parent="MeshInstance" instance=ExtResource( 161 )]
+transform = Transform( -0.985378, 0, 0.170381, 0, 1, 0, -0.170381, 0, -0.985378, 2.49636, 0.0500001, 0.0718517 )
+
+[node name="log_stack" parent="MeshInstance" instance=ExtResource( 156 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86901, 0.0500001, -1.35776 )
+
+[node name="log_stackLarge" parent="MeshInstance" instance=ExtResource( 157 )]
+transform = Transform( 0.743542, 0, -0.66869, 0, 1, 0, 0.66869, 0, 0.743542, 0.58404, 0.0500001, -1.08107 )
+
+[node name="mushroom_red" parent="MeshInstance" instance=ExtResource( 167 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64008, 0.0499999, -3.08944 )
+
+[node name="mushroom_redGroup" parent="MeshInstance" instance=ExtResource( 174 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46067, 0.05, -3.0391 )
+
+[node name="mushroom_redTall" parent="MeshInstance" instance=ExtResource( 158 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96607, 0.280089, -3.19627 )
+
+[node name="mushroom_tan" parent="MeshInstance" instance=ExtResource( 168 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.733493, 0.2232, -2.352 )
+
+[node name="mushroom_tanGroup" parent="MeshInstance" instance=ExtResource( 160 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.79852, 0.0500001, -2.41224 )
+
+[node name="mushroom_tanTall" parent="MeshInstance" instance=ExtResource( 159 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24451, 0.301713, -3.84899 )
+
+[node name="path_stone" parent="MeshInstance" instance=ExtResource( 148 )]
+transform = Transform( 0.00567227, 0, -0.999984, 0, 1, 0, 0.999984, 0, 0.00567227, 1.24174, 0.0332106, -2.57954 )
+
+[node name="path_stoneCircle" parent="MeshInstance/path_stone" instance=ExtResource( 170 )]
+transform = Transform( 1, 0, -1.39698e-09, 0, 1, 0, 1.39698e-09, 0, 1, 0.839376, -0.00752521, 0.000330925 )
+
+[node name="path_stoneCorner" parent="MeshInstance/path_stone/path_stoneCircle" instance=ExtResource( 154 )]
+transform = Transform( -0.519832, 0, 0.854268, 0, 1, 0, -0.854268, 0, -0.519832, 0.559362, 0.0044136, -0.241241 )
+
+[node name="path_stoneEnd" parent="MeshInstance/path_stone/path_stoneCircle/path_stoneCorner" instance=ExtResource( 171 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.848394, -0.00155032, 0.160466 )
+
+[node name="path_wood" parent="MeshInstance/path_stone/path_stoneCircle/path_stoneCorner/path_stoneEnd" instance=ExtResource( 149 )]
+transform = Transform( 0.787204, -0.139026, -0.600818, 0.162595, 0.986575, -0.0152524, 0.594872, -0.0856832, 0.799241, 0.649986, 0.130641, 2.45906 )
+
+[node name="path_woodEnd" parent="MeshInstance" instance=ExtResource( 177 )]
+transform = Transform( 0.645098, -0.7641, 0, 0.7641, 0.645098, 0, 0, 0, 1, 5.5839, 0.995201, 1.21803 )
+
+[node name="plant_bush" parent="MeshInstance" instance=ExtResource( 173 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3147, 0.050001, 0.586039 )
+
+[node name="plant_bushDetailed" parent="MeshInstance" instance=ExtResource( 150 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.60658, 0.0500005, 1.65963 )
+
+[node name="plant_bushLarge" parent="MeshInstance" instance=ExtResource( 155 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.88393, 0.05, 0.5581 )
+
+[node name="plant_bushLargeTriangle" parent="MeshInstance" instance=ExtResource( 175 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.42853, 0.05, 0.542194 )
+
+[node name="plant_bushSmall" parent="MeshInstance" instance=ExtResource( 151 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.90083, 0.0499998, 1.54498 )
+
+[node name="plant_bushTriangle" parent="MeshInstance" instance=ExtResource( 152 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.20241, 0.05, 0.697864 )
+
+[node name="plant_flatShort" parent="MeshInstance" instance=ExtResource( 178 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.15596, 0.05, 1.13683 )
+
+[node name="plant_flatTall" parent="MeshInstance" instance=ExtResource( 179 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.11492, 0.05, 1.53852 )
+
+[node name="platform_beach" parent="MeshInstance" instance=ExtResource( 143 )]
+transform = Transform( 6.88658, 0, -7.25086, 0, 10, 0, 7.25086, 0, 6.88658, -4.38226, 0.05, 5.62342 )
+
+[node name="platform_beach2" parent="MeshInstance" instance=ExtResource( 143 )]
+transform = Transform( -5.26333, 0, -8.50279, 0, 10, 0, 8.50279, 0, -5.26333, -5.16351, 0.05, -3.90605 )
+
+[node name="platform_beach3" parent="MeshInstance" instance=ExtResource( 143 )]
+transform = Transform( 8.01567, 0, -5.97905, 0, 10, 0, 5.97905, 0, 8.01567, 4.15397, 0.05, -3.90605 )
+
+[node name="platform_beach4" parent="MeshInstance" instance=ExtResource( 143 )]
+transform = Transform( -8.32129, 0, -5.54583, 0, 10, 0, 5.54583, 0, -8.32129, 2.72496, 0.282764, 4.86277 )
+
+[node name="stump_old" parent="MeshInstance" instance=ExtResource( 145 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9425, 0.0500002, -0.564669 )
+
+[node name="stump_oldTall" parent="MeshInstance" instance=ExtResource( 146 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.552699, 0.05, 0.0768456 )
+
+[node name="stump_round" parent="MeshInstance" instance=ExtResource( 153 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03052, 0.0500001, -0.0414116 )
+
+[node name="stump_roundDetailed" parent="MeshInstance" instance=ExtResource( 182 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51857, 0.05, -0.0356493 )
+
+[node name="stump_square" parent="MeshInstance" instance=ExtResource( 183 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50646, 0.05, 2.14885 )
+
+[node name="stump_squareDetailed" parent="MeshInstance" instance=ExtResource( 181 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.175896, 0.0499998, -1.8948 )
+
+[node name="stump_squareDetailedWide" parent="MeshInstance" instance=ExtResource( 180 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118357, 0.0499998, -2.42252 )
+
+[node name="tree_blocks" parent="MeshInstance" instance=ExtResource( 3 )]
+transform = Transform( 0.824561, 0, -0.565773, 0, 1, 0, 0.565773, 0, 0.824561, 0.509839, 0.0499998, -0.643105 )
+
+[node name="tent_detailedOpen" parent="." instance=ExtResource( 71 )]
+transform = Transform( 0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 1.81781, 0, 2.49602 )
+
+[node name="tent_detailedOpen2" parent="." instance=ExtResource( 71 )]
+transform = Transform( 0.998947, 0, 0.0458861, 0, 1, 0, -0.0458861, 0, 0.998947, 0.926965, 0, 2.98929 )
+
+[node name="tree_palm" parent="." instance=ExtResource( 79 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.42279, 0.0447294, 2.77199 )
+
+[node name="tree_cone" parent="." instance=ExtResource( 77 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96952, 0.0499997, 1.99441 )
+
+[node name="tree_plateau" parent="tree_cone" instance=ExtResource( 81 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.141173, 2.38419e-07, -1.28368 )
+
+[node name="tree_plateau_dark" parent="tree_cone" instance=ExtResource( 82 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 0.660597, 0, -1.43278 )
+
+[node name="tree_plateau_fall" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 75 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.988884, 2.38419e-07, 1.02605 )
+
+[node name="tree_simple" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 78 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25426, 0, 0.845979 )
+
+[node name="tree_simple_dark" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 72 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49053, 0, 0.799853 )
+
+[node name="tree_simple_fall" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 73 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20494, 2.38419e-07, 0.570575 )
+
+[node name="tree_small" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 76 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4414, 4.76837e-07, 0.396981 )
+
+[node name="tree_small_dark" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 55 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.344004, 2.38419e-07, -0.451107 )
+
+[node name="tree_small_fall" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167887, 4.76837e-07, -0.526297 )
+
+[node name="tree_tall" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.561364, 2.38419e-07, -0.055357 )
+
+[node name="tree_tall_dark" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 60 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.667955, 2.38419e-07, -0.536646 )
+
+[node name="tree_tall_fall" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 64 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0658, 0, -0.295761 )
+
+[node name="tree_thin_dark" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86112, 2.38419e-07, 0.214088 )
+
+[node name="tree_thin_fall" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.546907, -2.38419e-07, -1.14792 )
+
+[node name="tree_blocks" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104816, 0.0499997, 2.31912 )
+
+[node name="tree_blocks_dark" parent="." instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00974, 0.05, -0.415632 )
+
+[node name="tree_blocks_fall" parent="." instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30006, 0.0499997, -0.848284 )
+
+[node name="tree_blocks_fall2" parent="." instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31363, 0.0499997, 0.255297 )
+
+[node name="tree_blocks_fall3" parent="." instance=ExtResource( 39 )]
+transform = Transform( 0.777146, 0, 0.62932, 0, 1, 0, -0.62932, 0, 0.777146, -0.585262, 0.0499997, 2.27144 )
+
+[node name="tree_blocks_fall4" parent="." instance=ExtResource( 39 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -1.17426, 0.0499997, 2.27144 )
+
+[node name="stone_tallI" parent="tree_blocks_fall4" instance=ExtResource( 33 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51783, 2.98023e-07, -1.65631 )
+
+[node name="stone_tallJ" parent="tree_blocks_fall4" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.95007, 7.7486e-07, -1.408 )
+
+[node name="stone_tallH" parent="tree_blocks_fall4" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43844, 2.98023e-07, -1.17717 )
+
+[node name="stone_tallG" parent="tree_blocks_fall4" instance=ExtResource( 21 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.03227, 2.98023e-07, -0.978888 )
+
+[node name="stone_tallF" parent="tree_blocks_fall4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.48223, 2.98023e-07, -0.773495 )
+
+[node name="stone_tallE" parent="tree_blocks_fall4" instance=ExtResource( 36 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.89868, 2.98023e-07, -0.495289 )
+
+[node name="stone_tallD" parent="tree_blocks_fall4" instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.723868, 2.98023e-07, 0.0690668 )
+
+[node name="stone_tallC" parent="tree_blocks_fall4" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29295, -1.78814e-07, 0.347498 )
+
+[node name="stone_tallB" parent="tree_blocks_fall4" instance=ExtResource( 47 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.95038, -1.78814e-07, 0.541884 )
+
+[node name="stone_tallA" parent="tree_blocks_fall4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.83436, 2.98023e-07, 0.781391 )
+
+[node name="stone_smallTopB" parent="tree_blocks_fall4" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.63555, 4.47035e-08, 0.496386 )
+
+[node name="stone_smallTopA" parent="tree_blocks_fall4" instance=ExtResource( 63 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.84779, 4.47035e-08, 0.0257218 )
+
+[node name="stone_smallI" parent="tree_blocks_fall4" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.36834, 5.21541e-07, 1.02859 )
+
+[node name="tree_cone2" parent="." instance=ExtResource( 77 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64539, 0.0499999, 0.0216995 )
+
+[node name="tree_cone_dark" parent="." instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72686, 0.05, 0.37552 )
+
+[node name="tree_cone_fall" parent="." instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71849, 0.05, -0.372598 )
+
+[node name="tree_default" parent="." instance=ExtResource( 38 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75729, 0.0500004, -1.47526 )
+
+[node name="tree_default_dark" parent="." instance=ExtResource( 48 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.472832, 0.05, -1.5742 )
+
+[node name="tree_default_fall" parent="." instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49826, 0.0499995, -0.423586 )
+
+[node name="tree_detailed" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.732719, 0.05, -1.09463 )
+
+[node name="tree_detailed_dark" parent="." instance=ExtResource( 40 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.55308, 0.05, -0.805788 )
+
+[node name="tree_detailed_fall" parent="." instance=ExtResource( 50 )]
+transform = Transform( 0.640043, 0, 0.768339, 0, 1, 0, -0.768339, 0, 0.640043, 0.301033, 0.05, -1.17863 )
+
+[node name="tree_detailed_fall2" parent="." instance=ExtResource( 50 )]
+transform = Transform( 0.791693, 0, -0.610919, 0, 1, 0, 0.610919, 0, 0.791693, 1.92514, 0.05, -0.834275 )
+
+[node name="tree_fat" parent="." instance=ExtResource( 51 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.453121, 0.05, -1.80936 )
+
+[node name="tree_oak" parent="tree_fat" instance=ExtResource( 52 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6989, 2.38419e-07, 0.556192 )
+
+[node name="tree_oak_dark" parent="tree_fat" instance=ExtResource( 5 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 1.10048, 0, 4.82831 )
+
+[node name="tree_palm" parent="tree_fat/tree_oak_dark" instance=ExtResource( 79 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.934333, -4.76837e-07, -0.66651 )
+
+[node name="tree_palmBend" parent="tree_fat/tree_oak_dark" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13302, 0, -0.0286511 )
+
+[node name="tree_palmDetailedShort" parent="tree_fat/tree_oak_dark" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0558848, 0, 1.49742 )
+
+[node name="tree_palmDetailedTall" parent="tree_fat/tree_oak_dark" instance=ExtResource( 61 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.377331, 0, -1.228 )
+
+[node name="tree_palmShort" parent="tree_fat/tree_oak_dark" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27275, 0, -0.901181 )
+
+[node name="tree_palmTall" parent="tree_fat/tree_oak_dark" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.717773, -4.76837e-07, 0.0137587 )
+
+[node name="tree_pineDefaultA" parent="tree_fat/tree_oak_dark" instance=ExtResource( 41 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.62224, -4.76837e-07, 3.52917 )
+
+[node name="tree_pineDefaultB" parent="tree_fat/tree_oak_dark" instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.66611, 0, 4.12126 )
+
+[node name="tree_pineGroundA" parent="tree_fat/tree_oak_dark" instance=ExtResource( 42 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.05763, -4.17233e-07, 4.09273 )
+
+[node name="tree_pineGroundB" parent="tree_fat/tree_oak_dark" instance=ExtResource( 34 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59767, -4.17233e-07, 4.52479 )
+
+[node name="tree_pineRoundA" parent="tree_fat/tree_oak_dark" instance=ExtResource( 54 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2919, 0, 4.77389 )
+
+[node name="tree_pineRoundB" parent="tree_fat/tree_oak_dark" instance=ExtResource( 49 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.92182, -4.76837e-07, 5.04852 )
+
+[node name="tree_pineRoundC" parent="tree_fat/tree_oak_dark" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20742, -4.76837e-07, 4.72483 )
+
+[node name="tree_pineRoundD" parent="tree_fat/tree_oak_dark" instance=ExtResource( 43 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.44194, -4.76837e-07, 3.23498 )
+
+[node name="tree_pineRoundE" parent="tree_fat/tree_oak_dark" instance=ExtResource( 44 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05871, 0, 3.32139 )
+
+[node name="tree_pineRoundF" parent="tree_fat/tree_oak_dark" instance=ExtResource( 45 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.92518, -2.38419e-07, 3.96274 )
+
+[node name="tree_pineSmallA" parent="tree_fat/tree_oak_dark" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.42697, -1.78814e-07, 3.99574 )
+
+[node name="tree_pineSmallB" parent="tree_fat/tree_oak_dark" instance=ExtResource( 53 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4239, -4.17233e-07, 4.59701 )
+
+[node name="tree_pineSmallC" parent="tree_fat/tree_oak_dark" instance=ExtResource( 56 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58085, -2.38419e-07, 5.36951 )
+
+[node name="tree_pineSmallD" parent="tree_fat/tree_oak_dark" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.23307, -6.55651e-07, 5.67738 )
+
+[node name="tree_pineTallA" parent="tree_fat/tree_oak_dark" instance=ExtResource( 35 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.73435, -4.76837e-07, 5.85489 )
+
+[node name="tree_pineTallA_detailed" parent="tree_fat/tree_oak_dark" instance=ExtResource( 57 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.22573, -4.76837e-07, 4.16305 )
+
+[node name="tree_pineTallB" parent="tree_fat/tree_oak_dark" instance=ExtResource( 46 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.92802, 4.76837e-07, 5.61943 )
+
+[node name="tree_pineTallB_detailed" parent="tree_fat/tree_oak_dark" instance=ExtResource( 58 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02008, 4.76837e-07, 3.21748 )
+
+[node name="tree_pineTallC" parent="tree_fat/tree_oak_dark" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21876, 0, 5.87429 )
+
+[node name="tree_pineTallC_detailed" parent="tree_fat/tree_oak_dark" instance=ExtResource( 59 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8833, 2.38419e-07, 4.48904 )
+
+[node name="tree_pineTallD" parent="tree_fat/tree_oak_dark" instance=ExtResource( 62 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.85658, -2.38419e-07, 4.86723 )
+
+[node name="tree_pineTallD_detailed" parent="tree_fat/tree_oak_dark" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.29839, 0, 6.20877 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 0.673129, -0.739525, 0, 0.739525, 0.673129, 0, 0, 0, 1, 6.00966, -0.101548, 1.13168 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 0.922679, -0.385568, 0, 0.385568, 0.922679, 0, 0, 0, 1, 5.0573, -0.414053, 1.13168 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( 0.945223, -0.326426, 0, 0.326426, 0.945223, 0, 0, 0, 1, 3.83792, -0.85663, 1.14806 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="stone_smallB" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.631456, 0.0499995, -0.246445 )
+
+[node name="stone_smallA" parent="." instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.782992, 0.05, 0.25168 )
+
+[node name="stone_largeF" parent="." instance=ExtResource( 12 )]
+transform = Transform( 0.957005, 0, 0, 0, 0.957005, 0, 0, 0, 0.957005, -0.421836, 0.0499999, -1.00909 )
+
+[node name="stone_largeE" parent="." instance=ExtResource( 65 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.86104, 0.05, 2.70019 )
+
+[node name="statue_ring" parent="." instance=ExtResource( 66 )]
+transform = Transform( 0.0214136, 0, -0.999771, 0, 1, 0, 0.999771, 0, 0.0214136, -3.80623, 0.05, 1.02668 )
+
+[node name="statue_columnDamaged" parent="." instance=ExtResource( 70 )]
+transform = Transform( 3.52498, 0, 0, 0, 6.6454, 0, 0, 0, 3.13909, 2.92971, 0.0375505, 3.88607 )
+
+[node name="statue_block" parent="statue_columnDamaged" instance=ExtResource( 69 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05353, -7.17118e-08, -0.124438 )
+
+[node name="pot_small" parent="." instance=ExtResource( 67 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.590253, 0.05, 2.06713 )
+
+[node name="crops_cornStageB" parent="pot_small" instance=ExtResource( 84 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.63997, -0.00298493, -0.0968401 )
+
+[node name="crops_cornStageC" parent="pot_small" instance=ExtResource( 85 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.891173, -0.00298523, -0.119244 )
+
+[node name="crops_cornStageD" parent="pot_small" instance=ExtResource( 83 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07755, -0.00298499, -0.230912 )
+
+[node name="pot_large" parent="." instance=ExtResource( 68 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.84129, 0.0500002, 1.8463 )
+
+[node name="canoe" parent="." instance=ExtResource( 93 )]
+transform = Transform( 0.767646, 0, -0.640874, 0, 1, 0, 0.640874, 0, 0.767646, -0.0507979, 0.037131, -0.34713 )
+
+[node name="crops_leafsStageA" parent="." instance=ExtResource( 99 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11954, 0.0470148, 1.92032 )
+
+[node name="crops_leafsStageA2" parent="." instance=ExtResource( 99 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46488, 0.0470144, -0.266841 )
+
+[node name="crops_leafsStageB" parent="." instance=ExtResource( 100 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16508, 0.0470144, -0.330496 )
+
+[node name="crops_wheatStageA" parent="." instance=ExtResource( 86 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.818746, 0.0470144, 0.577978 )
+
+[node name="crops_wheatStageB" parent="." instance=ExtResource( 94 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.492056, 0.0470148, -0.501756 )
+
+[node name="crop_carrot" parent="." instance=ExtResource( 87 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12719, 0.047015, 1.63287 )
+
+[node name="crop_carrot2" parent="." instance=ExtResource( 87 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84569, 0.0470148, 1.84537 )
+
+[node name="crop_melon" parent="." instance=ExtResource( 88 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25744, 0.047015, 0.625776 )
+
+[node name="crop_pumpkin" parent="." instance=ExtResource( 89 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.263363, 0.0470148, 1.6505 )
+
+[node name="crop_turnip" parent="." instance=ExtResource( 101 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54829, 0.0470151, 0.194993 )
+
+[node name="fence_bend" parent="." instance=ExtResource( 90 )]
+transform = Transform( 0.944313, 0, 0.329048, 0, 1, 0, -0.329048, 0, 0.944313, -0.21453, 0.0498436, 1.63112 )
+
+[node name="flower_purpleA" parent="." instance=ExtResource( 91 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.872577, 0.04527, -3.58863 )
+
+[node name="flower_purpleB" parent="." instance=ExtResource( 92 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02009, 0.0452697, -3.60792 )
+
+[node name="flower_purpleC" parent="." instance=ExtResource( 95 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18105, 0.0452697, -3.65271 )
+
+[node name="flower_redA" parent="." instance=ExtResource( 96 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33926, 0.04527, -3.61439 )
+
+[node name="flower_redB" parent="." instance=ExtResource( 97 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.48606, 0.0452697, -3.61613 )
+
+[node name="flower_redC" parent="." instance=ExtResource( 98 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65076, 0.0452697, -3.63187 )
+
+[node name="flower_yellowA" parent="." instance=ExtResource( 102 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.79939, 0.04527, -3.62825 )
+
+[node name="flower_yellowB" parent="." instance=ExtResource( 103 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.964116, 0.0452697, -3.43243 )
+
+[node name="flower_yellowC" parent="." instance=ExtResource( 110 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1406, 0.0452697, -3.48785 )
+
+[node name="grass" parent="." instance=ExtResource( 107 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03275, 0.0452697, -3.52861 )
+
+[node name="grass2" parent="." instance=ExtResource( 107 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31937, 0.0452697, -3.54399 )
+
+[node name="grass3" parent="." instance=ExtResource( 107 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70192, 0.04527, -3.55039 )
+
+[node name="grass_large" parent="." instance=ExtResource( 109 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.69303, 0.04527, -3.32906 )
+
+[node name="grass_large2" parent="." instance=ExtResource( 109 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36024, 0.0452697, -3.31687 )
+
+[node name="grass_large3" parent="." instance=ExtResource( 109 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02388, 0.0452697, -3.29929 )
+
+[node name="grass_leafs" parent="." instance=ExtResource( 111 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.938173, 0.0452697, -3.08431 )
+
+[node name="grass_leafs2" parent="." instance=ExtResource( 111 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11146, 0.0452697, -3.06813 )
+
+[node name="grass_leafs3" parent="." instance=ExtResource( 111 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31438, 0.0452697, -3.08984 )
+
+[node name="grass_leafs4" parent="." instance=ExtResource( 111 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5305, 0.04527, -3.12772 )
+
+[node name="grass_leafs5" parent="." instance=ExtResource( 111 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73974, 0.0452697, -3.14064 )
+
+[node name="grass_leafsLarge" parent="." instance=ExtResource( 104 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02377, 0.0452697, -2.42313 )
+
+[node name="grass_leafsLarge2" parent="." instance=ExtResource( 104 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9429, 0.0452695, -2.89733 )
+
+[node name="grass_leafsLarge3" parent="." instance=ExtResource( 104 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08547, 0.0452695, -3.38367 )
+
+[node name="hanging_moss" parent="." instance=ExtResource( 105 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35349, 0.538506, -4.45865 )
+
+[node name="hanging_moss2" parent="." instance=ExtResource( 105 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53558, 1.17196, -4.49398 )
+
+[node name="lily_large" parent="." instance=ExtResource( 114 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68341, 0.04527, -3.07569 )
+
+[node name="lily_small" parent="." instance=ExtResource( 106 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.520982, 0.0452697, -2.90717 )
+
+[node name="log" parent="." instance=ExtResource( 108 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.723292, 0.0452697, -2.51795 )
+
+[node name="log_large" parent="." instance=ExtResource( 112 )]
+transform = Transform( -0.00399691, 0, -0.999992, 0, 1, 0, 0.999992, 0, -0.00399691, 2.07347, -0.0283694, -3.5246 )
+
+[node name="path_wood" parent="." instance=ExtResource( 149 )]
+transform = Transform( 0.900516, -0.434822, 0, 0.434822, 0.900516, 0, 0, 0, 1, 5.04415, 0.726434, 1.22213 )
+
+[node name="path_wood2" parent="." instance=ExtResource( 149 )]
+transform = Transform( 0.951105, -0.308868, 0, 0.308868, 0.951105, 0, 0, 0, 1, 3.91114, 0.261777, 1.22213 )
+
+[node name="rock_largeA" parent="." instance=ExtResource( 113 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83431, 0.0434481, 2.77596 )
+
+[node name="rock_largeB" parent="." instance=ExtResource( 127 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50562, 0.0434471, 2.7494 )
+
+[node name="rock_largeC" parent="." instance=ExtResource( 131 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.93171, 0.0434481, 3.44215 )
+
+[node name="rock_largeD" parent="." instance=ExtResource( 141 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69896, 0.0434486, 3.73296 )
+
+[node name="rock_largeE" parent="." instance=ExtResource( 132 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93475, 0.0434476, 3.04931 )
+
+[node name="rock_largeF" parent="." instance=ExtResource( 116 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58745, 0.0434476, 4.13197 )
+
+[node name="rock_smallA" parent="." instance=ExtResource( 137 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.914028, 0.0434481, 4.27893 )
+
+[node name="rock_smallB" parent="." instance=ExtResource( 128 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.544465, 0.0434481, 4.29443 )
+
+[node name="rock_smallC" parent="." instance=ExtResource( 117 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15025, 0.0434481, 4.49132 )
+
+[node name="rock_smallD" parent="." instance=ExtResource( 129 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.817904, 0.0511611, 4.61662 )
+
+[node name="rock_smallFlatA" parent="." instance=ExtResource( 118 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.191809, 0.0434483, 4.27694 )
+
+[node name="rock_smallFlatB" parent="." instance=ExtResource( 136 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58771, 0.0434476, -1.26224 )
+
+[node name="rock_smallFlatC" parent="." instance=ExtResource( 140 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8347, 0.0434481, -1.55247 )
+
+[node name="rock_smallG" parent="." instance=ExtResource( 125 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.30939, 0.0434478, -1.79837 )
+
+[node name="rock_smallH" parent="." instance=ExtResource( 142 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6296, 0.0434481, -2.0515 )
+
+[node name="rock_smallI" parent="." instance=ExtResource( 123 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.72316, 0.0434478, -1.68588 )
+
+[node name="rock_smallTopA" parent="." instance=ExtResource( 124 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97259, 0.0434476, -1.40085 )
+
+[node name="rock_smallTopB" parent="." instance=ExtResource( 121 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51294, 0.0434476, -1.27858 )
+
+[node name="rock_tallA" parent="." instance=ExtResource( 133 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.26317, 0.0434481, -1.02931 )
+
+[node name="rock_tallB" parent="." instance=ExtResource( 139 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.62126, 0.0434479, -0.500781 )
+
+[node name="rock_tallC" parent="." instance=ExtResource( 115 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.08445, 0.0434481, -0.593749 )
+
+[node name="rock_tallD" parent="." instance=ExtResource( 135 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39896, 0.0434479, -0.264876 )
+
+[node name="rock_tallE" parent="." instance=ExtResource( 130 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.78822, 0.0434476, -0.0578708 )
+
+[node name="rock_tallF" parent="." instance=ExtResource( 122 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98474, 0.0434486, -0.468794 )
+
+[node name="rock_tallG" parent="." instance=ExtResource( 119 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51746, 0.0434486, -0.690519 )
+
+[node name="rock_tallH" parent="." instance=ExtResource( 126 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87781, 0.0434481, -1.04838 )
+
+[node name="rock_tallI" parent="." instance=ExtResource( 120 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.88376, 0.0434479, -0.420168 )
+
+[node name="rock_tallJ" parent="." instance=ExtResource( 138 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27537, 0.0434479, -0.313616 )
+
+[node name="sign" parent="." instance=ExtResource( 134 )]
+transform = Transform( -0.990922, 0, 0.134436, 0, 1, 0, -0.134436, 0, -0.990922, -2.95493, 0.0434479, 0.603351 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.0841699, 0.2896, -0.95344, 0.0254669, 0.957148, 0.288478, 0.996126, -1.85543e-09, -0.0879382, -6.62844, 5.41629, 0 )
+light_color = Color( 0.0352941, 0.972549, 0.709804, 1 )
+light_energy = 1.16
+light_bake_mode = 2
+shadow_enabled = true
+shadow_reverse_cull_face = true
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.727569, 0.411507, -0.548913, 0, 0.800125, 0.599834, 0.686034, -0.436421, 0.582146, -1.08599, 3.11416, 3.39493 )
+fov = 68.2
+near = 1.36

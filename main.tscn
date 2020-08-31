@@ -1,4 +1,4 @@
-[gd_scene load_steps=187 format=2]
+[gd_scene load_steps=188 format=2]
 
 [ext_resource path="res://Models/stone_smallB.glb" type="PackedScene" id=1]
 [ext_resource path="res://Models/stone_tallA.glb" type="PackedScene" id=2]
@@ -183,6 +183,7 @@
 [ext_resource path="res://Models/stump_squareDetailed.glb" type="PackedScene" id=181]
 [ext_resource path="res://Models/stump_roundDetailed.glb" type="PackedScene" id=182]
 [ext_resource path="res://Models/stump_square.glb" type="PackedScene" id=183]
+[ext_resource path="res://Ayahuasca Village work in progress that can change drasticaly just having fun.ogg" type="AudioStream" id=184]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.0588235, 0.917647, 0.513726, 1 )
@@ -201,14 +202,14 @@ use_in_baked_light = true
 mesh = SubResource( 2 )
 material/0 = null
 
+[node name="statue_head" parent="MeshInstance" instance=ExtResource( 80 )]
+transform = Transform( -2.20846, 0, -4.03944, 0, 4.55333, 0, 3.3394, 0, -2.67143, -1.66576, 0.136006, -2.73347 )
+
+[node name="statue_head2" parent="MeshInstance" instance=ExtResource( 80 )]
+transform = Transform( -2.44649, 0, 3.83353, 0, 4.55333, 0, -3.16915, 0, -2.95936, 3.92475, 0.136006, -2.14023 )
+
 [node name="statue_obelisk" parent="MeshInstance" instance=ExtResource( 74 )]
 transform = Transform( 4.00361, 0, 0, 0, 4.55333, 0, 0, 0, 4.8429, 1.32751, 0.0500005, -4.42804 )
-
-[node name="statue_head" parent="MeshInstance/statue_obelisk" instance=ExtResource( 80 )]
-transform = Transform( -0.551617, 0, -1.00895, 0, 1, 0, 0.689545, 0, -0.551617, -0.747643, 0.0188884, 0.349908 )
-
-[node name="statue_head2" parent="MeshInstance/statue_obelisk" instance=ExtResource( 80 )]
-transform = Transform( -0.611071, 0, 0.957518, 0, 1, 0, -0.654392, 0, -0.611071, 0.648724, 0.0188884, 0.472404 )
 
 [node name="canoe_paddle" parent="MeshInstance" instance=ExtResource( 166 )]
 transform = Transform( 0.935549, -0.0201776, 0.35262, 0.353197, 0.0534463, -0.934021, 0, 0.998367, 0.0571283, 0.0669963, 0.226703, -0.856196 )
@@ -222,23 +223,23 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.373464, 0.0500003, 0.296109
 [node name="campfire_bricks" parent="MeshInstance" instance=ExtResource( 147 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24768, 0.05, 1.99872 )
 
+[node name="campfire_stones" parent="MeshInstance" instance=ExtResource( 162 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68155, 0.05, 1.67997 )
+
+[node name="campfire_logs" parent="MeshInstance" instance=ExtResource( 164 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70395, 0.0499999, 1.67622 )
+
 [node name="campfire_planks" parent="MeshInstance" instance=ExtResource( 176 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24644, 0.0500002, 1.9942 )
 
-[node name="campfire_stones" parent="MeshInstance/campfire_planks" instance=ExtResource( 162 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435111, -2.38419e-07, -0.314234 )
+[node name="crops_bambooStageB" parent="MeshInstance" instance=ExtResource( 172 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.338, 0.05, 1.83932 )
 
-[node name="campfire_logs" parent="MeshInstance/campfire_planks" instance=ExtResource( 164 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.457516, -3.57628e-07, -0.31798 )
+[node name="crops_cornStageA" parent="MeshInstance" instance=ExtResource( 165 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.196148, 0.0500003, 2.00972 )
 
 [node name="crops_bambooStageA" parent="MeshInstance" instance=ExtResource( 163 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.53916, 0.05, 2.30826 )
-
-[node name="crops_bambooStageB" parent="MeshInstance/crops_bambooStageA" instance=ExtResource( 172 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.87715, 0, -0.468948 )
-
-[node name="crops_cornStageA" parent="MeshInstance/crops_bambooStageA" instance=ExtResource( 165 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.34301, 2.38419e-07, -0.298543 )
 
 [node name="fence_bendCenter" parent="MeshInstance" instance=ExtResource( 161 )]
 transform = Transform( -0.985378, 0, 0.170381, 0, 1, 0, -0.170381, 0, -0.985378, 2.49636, 0.0500001, 0.0718517 )
@@ -267,20 +268,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.79852, 0.0500001, -2.41224 )
 [node name="mushroom_tanTall" parent="MeshInstance" instance=ExtResource( 159 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24451, 0.301713, -3.84899 )
 
+[node name="path_wood" parent="MeshInstance" instance=ExtResource( 149 )]
+transform = Transform( 0.982263, -0.163309, -0.092142, 0.162595, 0.986575, -0.0152524, 0.0933959, -1.16415e-10, 0.995629, 2.69606, 0.15919, 1.15193 )
+
+[node name="path_stoneEnd" parent="MeshInstance" instance=ExtResource( 171 )]
+transform = Transform( 0.851306, 0, 0.52467, 0, 1, 0, -0.52467, 0, 0.851306, 0.852531, 0.0285487, -0.600455 )
+
+[node name="path_stoneCorner" parent="MeshInstance" instance=ExtResource( 154 )]
+transform = Transform( 0.851306, 0, 0.52467, 0, 1, 0, -0.52467, 0, 0.851306, 1.49058, 0.030099, -1.18219 )
+
+[node name="path_stoneCircle" parent="MeshInstance" instance=ExtResource( 170 )]
+transform = Transform( 0.00567227, 0, -0.999984, 0, 1, 0, 0.999984, 0, 0.00567227, 1.24617, 0.0256854, -1.74017 )
+
 [node name="path_stone" parent="MeshInstance" instance=ExtResource( 148 )]
 transform = Transform( 0.00567227, 0, -0.999984, 0, 1, 0, 0.999984, 0, 0.00567227, 1.24174, 0.0332106, -2.57954 )
-
-[node name="path_stoneCircle" parent="MeshInstance/path_stone" instance=ExtResource( 170 )]
-transform = Transform( 1, 0, -1.39698e-09, 0, 1, 0, 1.39698e-09, 0, 1, 0.839376, -0.00752521, 0.000330925 )
-
-[node name="path_stoneCorner" parent="MeshInstance/path_stone/path_stoneCircle" instance=ExtResource( 154 )]
-transform = Transform( -0.519832, 0, 0.854268, 0, 1, 0, -0.854268, 0, -0.519832, 0.559362, 0.0044136, -0.241241 )
-
-[node name="path_stoneEnd" parent="MeshInstance/path_stone/path_stoneCircle/path_stoneCorner" instance=ExtResource( 171 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.848394, -0.00155032, 0.160466 )
-
-[node name="path_wood" parent="MeshInstance/path_stone/path_stoneCircle/path_stoneCorner/path_stoneEnd" instance=ExtResource( 149 )]
-transform = Transform( 0.787204, -0.139026, -0.600818, 0.162595, 0.986575, -0.0152524, 0.594872, -0.0856832, 0.799241, 0.649986, 0.130641, 2.45906 )
 
 [node name="path_woodEnd" parent="MeshInstance" instance=ExtResource( 177 )]
 transform = Transform( 0.645098, -0.7641, 0, 0.7641, 0.645098, 0, 0, 0, 1, 5.5839, 0.995201, 1.21803 )
@@ -345,506 +346,506 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118357, 0.0499998, -2.42252
 [node name="tree_blocks" parent="MeshInstance" instance=ExtResource( 3 )]
 transform = Transform( 0.824561, 0, -0.565773, 0, 1, 0, 0.565773, 0, 0.824561, 0.509839, 0.0499998, -0.643105 )
 
-[node name="tent_detailedOpen" parent="." instance=ExtResource( 71 )]
-transform = Transform( 0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 1.81781, 0, 2.49602 )
+[node name="tent_detailedOpen" parent="MeshInstance" instance=ExtResource( 71 )]
+transform = Transform( 0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 1.81326, 0.00655192, 2.49448 )
 
-[node name="tent_detailedOpen2" parent="." instance=ExtResource( 71 )]
-transform = Transform( 0.998947, 0, 0.0458861, 0, 1, 0, -0.0458861, 0, 0.998947, 0.926965, 0, 2.98929 )
+[node name="tent_detailedOpen2" parent="MeshInstance" instance=ExtResource( 71 )]
+transform = Transform( 0.998947, 0, 0.0458861, 0, 1, 0, -0.0458861, 0, 0.998947, 0.922413, 0.00655192, 2.98775 )
 
-[node name="tree_palm" parent="." instance=ExtResource( 79 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.42279, 0.0447294, 2.77199 )
+[node name="tree_palm" parent="MeshInstance" instance=ExtResource( 79 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.41824, 0.0512813, 2.77045 )
 
-[node name="tree_cone" parent="." instance=ExtResource( 77 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96952, 0.0499997, 1.99441 )
+[node name="tree_plateau_fall" parent="MeshInstance" instance=ExtResource( 75 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 3.44492, 0.0565519, 1.97361 )
 
-[node name="tree_plateau" parent="tree_cone" instance=ExtResource( 81 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.141173, 2.38419e-07, -1.28368 )
+[node name="tree_simple" parent="MeshInstance" instance=ExtResource( 78 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 3.7515, 0.0565516, 2.06773 )
 
-[node name="tree_plateau_dark" parent="tree_cone" instance=ExtResource( 82 )]
-transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 0.660597, 0, -1.43278 )
+[node name="tree_simple_dark" parent="MeshInstance" instance=ExtResource( 72 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 3.93543, 0.0565516, 2.22305 )
 
-[node name="tree_plateau_fall" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 75 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.988884, 2.38419e-07, 1.02605 )
+[node name="tree_simple_fall" parent="MeshInstance" instance=ExtResource( 73 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 3.93533, 0.0565519, 1.85681 )
 
-[node name="tree_simple" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 78 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.25426, 0, 0.845979 )
+[node name="tree_small" parent="MeshInstance" instance=ExtResource( 76 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 4.21875, 0.0565521, 1.93245 )
 
-[node name="tree_simple_dark" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 72 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49053, 0, 0.799853 )
+[node name="tree_small_dark" parent="MeshInstance" instance=ExtResource( 55 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 4.19269, 0.0565519, 0.545776 )
 
-[node name="tree_simple_fall" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 73 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.20494, 2.38419e-07, 0.570575 )
+[node name="tree_small_fall" parent="MeshInstance" instance=ExtResource( 14 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 3.93074, 0.0565521, 0.0996067 )
 
-[node name="tree_small" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 76 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4414, 4.76837e-07, 0.396981 )
+[node name="tree_tall" parent="MeshInstance" instance=ExtResource( 7 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 3.31717, 0.0565519, 0.0877695 )
 
-[node name="tree_small_dark" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 55 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.344004, 2.38419e-07, -0.451107 )
+[node name="tree_tall_dark" parent="MeshInstance" instance=ExtResource( 60 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 3.62564, 0.0565519, -0.296738 )
 
-[node name="tree_small_fall" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 14 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167887, 4.76837e-07, -0.526297 )
+[node name="tree_tall_fall" parent="MeshInstance" instance=ExtResource( 64 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 3.18869, 0.0565516, -0.456053 )
 
-[node name="tree_tall" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 7 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.561364, 2.38419e-07, -0.055357 )
+[node name="tree_thin_dark" parent="MeshInstance" instance=ExtResource( 30 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 4.62418, 0.0565519, 2.14513 )
 
-[node name="tree_tall_dark" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 60 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.667955, 2.38419e-07, -0.536646 )
+[node name="tree_thin_fall" parent="MeshInstance" instance=ExtResource( 16 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 4.86301, 0.0565514, 0.267584 )
 
-[node name="tree_tall_fall" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 64 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0658, 0, -0.295761 )
+[node name="tree_plateau" parent="MeshInstance" instance=ExtResource( 81 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.10614, 0.0565519, 0.709189 )
 
-[node name="tree_thin_dark" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 30 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.86112, 2.38419e-07, 0.214088 )
+[node name="tree_plateau_dark" parent="MeshInstance" instance=ExtResource( 82 )]
+transform = Transform( 0.62625, 0, -0.779622, 0, 1, 0, 0.779622, 0, 0.62625, 3.62557, 0.0565516, 0.560089 )
 
-[node name="tree_thin_fall" parent="tree_cone/tree_plateau_dark" instance=ExtResource( 16 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.546907, -2.38419e-07, -1.14792 )
+[node name="tree_cone" parent="MeshInstance" instance=ExtResource( 77 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.96497, 0.0565516, 1.99287 )
 
-[node name="tree_blocks" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104816, 0.0499997, 2.31912 )
+[node name="tree_blocks2" parent="MeshInstance" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.100264, 0.0565516, 2.31758 )
 
-[node name="tree_blocks_dark" parent="." instance=ExtResource( 22 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00974, 0.05, -0.415632 )
+[node name="tree_blocks_dark" parent="MeshInstance" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01429, 0.0565519, -0.417173 )
 
-[node name="tree_blocks_fall" parent="." instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30006, 0.0499997, -0.848284 )
+[node name="tree_blocks_fall" parent="MeshInstance" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.30461, 0.0565516, -0.849825 )
 
-[node name="tree_blocks_fall2" parent="." instance=ExtResource( 39 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31363, 0.0499997, 0.255297 )
+[node name="tree_blocks_fall2" parent="MeshInstance" instance=ExtResource( 39 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31818, 0.0565516, 0.253756 )
 
-[node name="tree_blocks_fall3" parent="." instance=ExtResource( 39 )]
-transform = Transform( 0.777146, 0, 0.62932, 0, 1, 0, -0.62932, 0, 0.777146, -0.585262, 0.0499997, 2.27144 )
+[node name="tree_blocks_fall3" parent="MeshInstance" instance=ExtResource( 39 )]
+transform = Transform( 0.777146, 0, 0.62932, 0, 1, 0, -0.62932, 0, 0.777146, -0.589814, 0.0565516, 2.2699 )
 
-[node name="tree_blocks_fall4" parent="." instance=ExtResource( 39 )]
-transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -1.17426, 0.0499997, 2.27144 )
+[node name="stone_tallI" parent="MeshInstance" instance=ExtResource( 33 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -1.93162, 0.0565519, 0.153191 )
 
-[node name="stone_tallI" parent="tree_blocks_fall4" instance=ExtResource( 33 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51783, 2.98023e-07, -1.65631 )
+[node name="stone_tallJ" parent="MeshInstance" instance=ExtResource( 18 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -2.42644, 0.0565524, 0.213528 )
 
-[node name="stone_tallJ" parent="tree_blocks_fall4" instance=ExtResource( 18 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.95007, 7.7486e-07, -1.408 )
+[node name="stone_tallH" parent="MeshInstance" instance=ExtResource( 24 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -2.96615, 0.0565519, 0.235902 )
 
-[node name="stone_tallH" parent="tree_blocks_fall4" instance=ExtResource( 24 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43844, 2.98023e-07, -1.17717 )
+[node name="stone_tallG" parent="MeshInstance" instance=ExtResource( 21 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -3.59031, 0.0565519, 0.187222 )
 
-[node name="stone_tallG" parent="tree_blocks_fall4" instance=ExtResource( 21 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.03227, 2.98023e-07, -0.978888 )
+[node name="stone_tallF" parent="MeshInstance" instance=ExtResource( 25 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -4.08474, 0.0565519, 0.201129 )
 
-[node name="stone_tallF" parent="tree_blocks_fall4" instance=ExtResource( 25 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.48223, 2.98023e-07, -0.773495 )
+[node name="stone_tallE" parent="MeshInstance" instance=ExtResource( 36 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -4.57666, 0.0565519, 0.295152 )
 
-[node name="stone_tallE" parent="tree_blocks_fall4" instance=ExtResource( 36 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.89868, 2.98023e-07, -0.495289 )
+[node name="stone_tallD" parent="MeshInstance" instance=ExtResource( 37 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -1.87241, 0.0565519, 2.05156 )
 
-[node name="stone_tallD" parent="tree_blocks_fall4" instance=ExtResource( 37 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.723868, 2.98023e-07, 0.0690668 )
+[node name="stone_tallC" parent="MeshInstance" instance=ExtResource( 23 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -2.505, 0.0565514, 2.08633 )
 
-[node name="stone_tallC" parent="tree_blocks_fall4" instance=ExtResource( 23 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29295, -1.78814e-07, 0.347498 )
+[node name="stone_tallB" parent="MeshInstance" instance=ExtResource( 47 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -3.18622, 0.0565514, 2.00929 )
 
-[node name="stone_tallB" parent="tree_blocks_fall4" instance=ExtResource( 47 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.95038, -1.78814e-07, 0.541884 )
+[node name="stone_tallA" parent="MeshInstance" instance=ExtResource( 2 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -4.09368, 0.0565519, 1.88557 )
 
-[node name="stone_tallA" parent="tree_blocks_fall4" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.83436, 2.98023e-07, 0.781391 )
+[node name="stone_smallTopB" parent="MeshInstance" instance=ExtResource( 17 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -4.72058, 0.0565517, 1.311 )
 
-[node name="stone_smallTopB" parent="tree_blocks_fall4" instance=ExtResource( 17 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.63555, 4.47035e-08, 0.496386 )
+[node name="stone_smallTopA" parent="MeshInstance" instance=ExtResource( 63 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -4.73273, 0.0565517, 0.794836 )
 
-[node name="stone_smallTopA" parent="tree_blocks_fall4" instance=ExtResource( 63 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.84779, 4.47035e-08, 0.0257218 )
+[node name="stone_smallI" parent="MeshInstance" instance=ExtResource( 26 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -4.68177, 0.0565521, 1.90525 )
 
-[node name="stone_smallI" parent="tree_blocks_fall4" instance=ExtResource( 26 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.36834, 5.21541e-07, 1.02859 )
+[node name="tree_blocks_fall4" parent="MeshInstance" instance=ExtResource( 39 )]
+transform = Transform( 0.921022, 0, -0.38951, 0, 1, 0, 0.38951, 0, 0.921022, -1.17881, 0.0565516, 2.2699 )
 
-[node name="tree_cone2" parent="." instance=ExtResource( 77 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64539, 0.0499999, 0.0216995 )
+[node name="tree_cone2" parent="MeshInstance" instance=ExtResource( 77 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.64084, 0.0565518, 0.0201581 )
 
-[node name="tree_cone_dark" parent="." instance=ExtResource( 20 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72686, 0.05, 0.37552 )
+[node name="tree_cone_dark" parent="MeshInstance" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.72231, 0.0565519, 0.373979 )
 
-[node name="tree_cone_fall" parent="." instance=ExtResource( 27 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71849, 0.05, -0.372598 )
+[node name="tree_cone_fall" parent="MeshInstance" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71394, 0.0565519, -0.374139 )
 
-[node name="tree_default" parent="." instance=ExtResource( 38 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75729, 0.0500004, -1.47526 )
+[node name="tree_default" parent="MeshInstance" instance=ExtResource( 38 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.75274, 0.0565523, -1.4768 )
 
-[node name="tree_default_dark" parent="." instance=ExtResource( 48 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.472832, 0.05, -1.5742 )
+[node name="tree_default_dark" parent="MeshInstance" instance=ExtResource( 48 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.477384, 0.0565519, -1.57574 )
 
-[node name="tree_default_fall" parent="." instance=ExtResource( 29 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.49826, 0.0499995, -0.423586 )
+[node name="tree_default_fall" parent="MeshInstance" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50281, 0.0565514, -0.425127 )
 
-[node name="tree_detailed" parent="." instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.732719, 0.05, -1.09463 )
+[node name="tree_detailed" parent="MeshInstance" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.737271, 0.0565519, -1.09617 )
 
-[node name="tree_detailed_dark" parent="." instance=ExtResource( 40 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.55308, 0.05, -0.805788 )
+[node name="tree_detailed_dark" parent="MeshInstance" instance=ExtResource( 40 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54853, 0.0565519, -0.807329 )
 
-[node name="tree_detailed_fall" parent="." instance=ExtResource( 50 )]
-transform = Transform( 0.640043, 0, 0.768339, 0, 1, 0, -0.768339, 0, 0.640043, 0.301033, 0.05, -1.17863 )
+[node name="tree_detailed_fall" parent="MeshInstance" instance=ExtResource( 50 )]
+transform = Transform( 0.640043, 0, 0.768339, 0, 1, 0, -0.768339, 0, 0.640043, 0.296481, 0.0565519, -1.18017 )
 
-[node name="tree_detailed_fall2" parent="." instance=ExtResource( 50 )]
-transform = Transform( 0.791693, 0, -0.610919, 0, 1, 0, 0.610919, 0, 0.791693, 1.92514, 0.05, -0.834275 )
+[node name="tree_detailed_fall2" parent="MeshInstance" instance=ExtResource( 50 )]
+transform = Transform( 0.791693, 0, -0.610919, 0, 1, 0, 0.610919, 0, 0.791693, 1.92059, 0.0565519, -0.835816 )
 
-[node name="tree_fat" parent="." instance=ExtResource( 51 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.453121, 0.05, -1.80936 )
+[node name="tree_oak" parent="MeshInstance" instance=ExtResource( 52 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.14747, 0.0565522, -1.25471 )
 
-[node name="tree_oak" parent="tree_fat" instance=ExtResource( 52 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6989, 2.38419e-07, 0.556192 )
+[node name="tree_palm2" parent="MeshInstance" instance=ExtResource( 79 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.408544, 0.0565514, 2.8891 )
 
-[node name="tree_oak_dark" parent="tree_fat" instance=ExtResource( 5 )]
-transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 1.10048, 0, 4.82831 )
+[node name="tree_palmBend" parent="MeshInstance" instance=ExtResource( 4 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.686865, 0.0565519, 2.28175 )
 
-[node name="tree_palm" parent="tree_fat/tree_oak_dark" instance=ExtResource( 79 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.934333, -4.76837e-07, -0.66651 )
+[node name="tree_palmDetailedShort" parent="MeshInstance" instance=ExtResource( 31 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.59107, 0.0565519, 1.94056 )
 
-[node name="tree_palmBend" parent="tree_fat/tree_oak_dark" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13302, 0, -0.0286511 )
+[node name="tree_palmDetailedTall" parent="MeshInstance" instance=ExtResource( 61 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.447857, 0.0565519, 3.67903 )
 
-[node name="tree_palmDetailedShort" parent="tree_fat/tree_oak_dark" instance=ExtResource( 31 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0558848, 0, 1.49742 )
+[node name="tree_palmShort" parent="MeshInstance" instance=ExtResource( 32 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 1.14991, 0.0565519, 3.87017 )
 
-[node name="tree_palmDetailedTall" parent="tree_fat/tree_oak_dark" instance=ExtResource( 61 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.377331, 0, -1.228 )
+[node name="tree_palmTall" parent="MeshInstance" instance=ExtResource( 28 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.09231, 0.0565514, 3.48672 )
 
-[node name="tree_palmShort" parent="tree_fat/tree_oak_dark" instance=ExtResource( 32 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.27275, 0, -0.901181 )
+[node name="tree_pineDefaultA" parent="MeshInstance" instance=ExtResource( 41 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.467649, 0.0565514, -2.69667 )
 
-[node name="tree_palmTall" parent="tree_fat/tree_oak_dark" instance=ExtResource( 28 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.717773, -4.76837e-07, 0.0137587 )
+[node name="tree_pineDefaultB" parent="MeshInstance" instance=ExtResource( 19 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.31872, 0.0565519, -1.83033 )
 
-[node name="tree_pineDefaultA" parent="tree_fat/tree_oak_dark" instance=ExtResource( 41 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.62224, -4.76837e-07, 3.52917 )
+[node name="tree_pineGroundA" parent="MeshInstance" instance=ExtResource( 42 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.00834, 0.0565515, -2.07067 )
 
-[node name="tree_pineDefaultB" parent="tree_fat/tree_oak_dark" instance=ExtResource( 19 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.66611, 0, 4.12126 )
+[node name="tree_pineGroundB" parent="MeshInstance" instance=ExtResource( 34 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.63924, 0.0565515, -2.08485 )
 
-[node name="tree_pineGroundA" parent="tree_fat/tree_oak_dark" instance=ExtResource( 42 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.05763, -4.17233e-07, 4.09273 )
+[node name="tree_pineRoundA" parent="MeshInstance" instance=ExtResource( 54 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.28911, 0.0565519, -2.73402 )
 
-[node name="tree_pineGroundB" parent="tree_fat/tree_oak_dark" instance=ExtResource( 34 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59767, -4.17233e-07, 4.52479 )
+[node name="tree_pineRoundB" parent="MeshInstance" instance=ExtResource( 49 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.74796, 0.0565514, -2.69111 )
 
-[node name="tree_pineRoundA" parent="tree_fat/tree_oak_dark" instance=ExtResource( 54 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2919, 0, 4.77389 )
+[node name="tree_pineRoundC" parent="MeshInstance" instance=ExtResource( 6 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 3.06326, 0.0565514, -1.97297 )
 
-[node name="tree_pineRoundB" parent="tree_fat/tree_oak_dark" instance=ExtResource( 49 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.92182, -4.76837e-07, 5.04852 )
+[node name="tree_pineRoundD" parent="MeshInstance" instance=ExtResource( 43 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.405255, 0.0565514, -2.35732 )
 
-[node name="tree_pineRoundC" parent="tree_fat/tree_oak_dark" instance=ExtResource( 6 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.20742, -4.76837e-07, 4.72483 )
+[node name="tree_pineRoundE" parent="MeshInstance" instance=ExtResource( 44 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.00406736, 0.0565519, -2.83368 )
 
-[node name="tree_pineRoundD" parent="tree_fat/tree_oak_dark" instance=ExtResource( 43 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.44194, -4.76837e-07, 3.23498 )
+[node name="tree_pineRoundF" parent="MeshInstance" instance=ExtResource( 45 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.531912, 0.0565517, -3.22167 )
 
-[node name="tree_pineRoundE" parent="tree_fat/tree_oak_dark" instance=ExtResource( 44 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.05871, 0, 3.32139 )
+[node name="tree_pineSmallA" parent="MeshInstance" instance=ExtResource( 13 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.180594, 0.0565517, -3.58148 )
 
-[node name="tree_pineRoundF" parent="tree_fat/tree_oak_dark" instance=ExtResource( 45 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.92518, -2.38419e-07, 3.96274 )
+[node name="tree_pineSmallB" parent="MeshInstance" instance=ExtResource( 53 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.58459, 0.0565515, -4.02681 )
 
-[node name="tree_pineSmallA" parent="tree_fat/tree_oak_dark" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.42697, -1.78814e-07, 3.99574 )
+[node name="tree_pineSmallC" parent="MeshInstance" instance=ExtResource( 56 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.47205, 0.0565517, -3.37025 )
 
-[node name="tree_pineSmallB" parent="tree_fat/tree_oak_dark" instance=ExtResource( 53 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4239, -4.17233e-07, 4.59701 )
+[node name="tree_pineSmallD" parent="MeshInstance" instance=ExtResource( 8 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.93651, 0.0565513, -3.36697 )
 
-[node name="tree_pineSmallC" parent="tree_fat/tree_oak_dark" instance=ExtResource( 56 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58085, -2.38419e-07, 5.36951 )
+[node name="tree_pineTallA" parent="MeshInstance" instance=ExtResource( 35 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.68212, 0.0565514, -3.83396 )
 
-[node name="tree_pineSmallD" parent="tree_fat/tree_oak_dark" instance=ExtResource( 8 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.23307, -6.55651e-07, 5.67738 )
+[node name="tree_pineTallA_detailed" parent="MeshInstance" instance=ExtResource( 57 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.442111, 0.0565514, -3.57152 )
 
-[node name="tree_pineTallA" parent="tree_fat/tree_oak_dark" instance=ExtResource( 35 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.73435, -4.76837e-07, 5.85489 )
+[node name="tree_pineTallB" parent="MeshInstance" instance=ExtResource( 46 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.38071, 0.0565524, -3.78815 )
 
-[node name="tree_pineTallA_detailed" parent="tree_fat/tree_oak_dark" instance=ExtResource( 57 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.22573, -4.76837e-07, 4.16305 )
+[node name="tree_pineTallB_detailed" parent="MeshInstance" instance=ExtResource( 58 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.707455, 0.0565524, -2.06245 )
 
-[node name="tree_pineTallB" parent="tree_fat/tree_oak_dark" instance=ExtResource( 46 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.92802, 4.76837e-07, 5.61943 )
+[node name="tree_pineTallC" parent="MeshInstance" instance=ExtResource( 9 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.33465, 0.0565519, -4.17203 )
 
-[node name="tree_pineTallB_detailed" parent="tree_fat/tree_oak_dark" instance=ExtResource( 58 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.02008, 4.76837e-07, 3.21748 )
+[node name="tree_pineTallC_detailed" parent="MeshInstance" instance=ExtResource( 59 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.17063, 0.0565522, -4.2534 )
 
-[node name="tree_pineTallC" parent="tree_fat/tree_oak_dark" instance=ExtResource( 9 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21876, 0, 5.87429 )
+[node name="tree_pineTallD" parent="MeshInstance" instance=ExtResource( 62 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 0.443182, 0.0565517, -4.51695 )
 
-[node name="tree_pineTallC_detailed" parent="tree_fat/tree_oak_dark" instance=ExtResource( 59 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.8833, 2.38419e-07, 4.48904 )
+[node name="tree_pineTallD_detailed" parent="MeshInstance" instance=ExtResource( 10 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 2.49887, 0.0565519, -4.47411 )
 
-[node name="tree_pineTallD" parent="tree_fat/tree_oak_dark" instance=ExtResource( 62 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.85658, -2.38419e-07, 4.86723 )
+[node name="tree_oak_dark" parent="MeshInstance" instance=ExtResource( 5 )]
+transform = Transform( -0.744067, 0, 0.668105, 0, 1, 0, -0.668105, 0, -0.744067, 1.54905, 0.0565519, 3.01741 )
 
-[node name="tree_pineTallD_detailed" parent="tree_fat/tree_oak_dark" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.29839, 0, 6.20877 )
+[node name="tree_fat" parent="MeshInstance" instance=ExtResource( 51 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.448569, 0.0565519, -1.8109 )
 
-[node name="MeshInstance2" type="MeshInstance" parent="."]
-transform = Transform( 0.673129, -0.739525, 0, 0.739525, 0.673129, 0, 0, 0, 1, 6.00966, -0.101548, 1.13168 )
+[node name="MeshInstance2" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( 0.673129, -0.739525, 0, 0.739525, 0.673129, 0, 0, 0, 1, 6.00511, -0.0949961, 1.13014 )
 mesh = SubResource( 3 )
 material/0 = null
 
-[node name="MeshInstance3" type="MeshInstance" parent="."]
-transform = Transform( 0.922679, -0.385568, 0, 0.385568, 0.922679, 0, 0, 0, 1, 5.0573, -0.414053, 1.13168 )
+[node name="MeshInstance3" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( 0.922679, -0.385568, 0, 0.385568, 0.922679, 0, 0, 0, 1, 5.05275, -0.407501, 1.13014 )
 mesh = SubResource( 3 )
 material/0 = null
 
-[node name="MeshInstance4" type="MeshInstance" parent="."]
-transform = Transform( 0.945223, -0.326426, 0, 0.326426, 0.945223, 0, 0, 0, 1, 3.83792, -0.85663, 1.14806 )
+[node name="MeshInstance4" type="MeshInstance" parent="MeshInstance"]
+transform = Transform( 0.945223, -0.326426, 0, 0.326426, 0.945223, 0, 0, 0, 1, 3.83337, -0.850078, 1.14652 )
 mesh = SubResource( 3 )
 material/0 = null
 
-[node name="stone_smallB" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.631456, 0.0499995, -0.246445 )
+[node name="stone_smallB" parent="MeshInstance" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.636008, 0.0565514, -0.247986 )
 
-[node name="stone_smallA" parent="." instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.782992, 0.05, 0.25168 )
+[node name="stone_smallA" parent="MeshInstance" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.787544, 0.0565519, 0.250139 )
 
-[node name="stone_largeF" parent="." instance=ExtResource( 12 )]
-transform = Transform( 0.957005, 0, 0, 0, 0.957005, 0, 0, 0, 0.957005, -0.421836, 0.0499999, -1.00909 )
+[node name="stone_largeF" parent="MeshInstance" instance=ExtResource( 12 )]
+transform = Transform( 0.957005, 0, 0, 0, 0.957005, 0, 0, 0, 0.957005, -0.426388, 0.0565518, -1.01063 )
 
-[node name="stone_largeE" parent="." instance=ExtResource( 65 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.86104, 0.05, 2.70019 )
+[node name="stone_largeE" parent="MeshInstance" instance=ExtResource( 65 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.85649, 0.0565519, 2.69865 )
 
-[node name="statue_ring" parent="." instance=ExtResource( 66 )]
-transform = Transform( 0.0214136, 0, -0.999771, 0, 1, 0, 0.999771, 0, 0.0214136, -3.80623, 0.05, 1.02668 )
+[node name="statue_ring" parent="MeshInstance" instance=ExtResource( 66 )]
+transform = Transform( 0.0214136, 0, -0.999771, 0, 1, 0, 0.999771, 0, 0.0214136, -3.81078, 0.0565519, 1.02514 )
 
-[node name="statue_columnDamaged" parent="." instance=ExtResource( 70 )]
-transform = Transform( 3.52498, 0, 0, 0, 6.6454, 0, 0, 0, 3.13909, 2.92971, 0.0375505, 3.88607 )
+[node name="statue_block" parent="MeshInstance" instance=ExtResource( 69 )]
+transform = Transform( 3.52498, 0, 0, 0, 6.6454, 0, 0, 0, 3.13909, -0.788514, 0.0441019, 3.49391 )
 
-[node name="statue_block" parent="statue_columnDamaged" instance=ExtResource( 69 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05353, -7.17118e-08, -0.124438 )
+[node name="statue_columnDamaged" parent="MeshInstance" instance=ExtResource( 70 )]
+transform = Transform( 3.52498, 0, 0, 0, 6.6454, 0, 0, 0, 3.13909, 2.92516, 0.0441024, 3.88453 )
 
-[node name="pot_small" parent="." instance=ExtResource( 67 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.590253, 0.05, 2.06713 )
+[node name="crops_cornStageB" parent="MeshInstance" instance=ExtResource( 84 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0542685, 0.053567, 1.96875 )
 
-[node name="crops_cornStageB" parent="pot_small" instance=ExtResource( 84 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.63997, -0.00298493, -0.0968401 )
+[node name="crops_cornStageC" parent="MeshInstance" instance=ExtResource( 85 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.305471, 0.0535667, 1.94635 )
 
-[node name="crops_cornStageC" parent="pot_small" instance=ExtResource( 85 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.891173, -0.00298523, -0.119244 )
+[node name="crops_cornStageD" parent="MeshInstance" instance=ExtResource( 83 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.491848, 0.0535669, 1.83468 )
 
-[node name="crops_cornStageD" parent="pot_small" instance=ExtResource( 83 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07755, -0.00298499, -0.230912 )
+[node name="pot_small" parent="MeshInstance" instance=ExtResource( 67 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.585701, 0.0565519, 2.06559 )
 
-[node name="pot_large" parent="." instance=ExtResource( 68 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.84129, 0.0500002, 1.8463 )
+[node name="pot_large" parent="MeshInstance" instance=ExtResource( 68 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.845842, 0.0565521, 1.84476 )
 
-[node name="canoe" parent="." instance=ExtResource( 93 )]
-transform = Transform( 0.767646, 0, -0.640874, 0, 1, 0, 0.640874, 0, 0.767646, -0.0507979, 0.037131, -0.34713 )
+[node name="canoe" parent="MeshInstance" instance=ExtResource( 93 )]
+transform = Transform( 0.767646, 0, -0.640874, 0, 1, 0, 0.640874, 0, 0.767646, -0.0553496, 0.0436829, -0.348671 )
 
-[node name="crops_leafsStageA" parent="." instance=ExtResource( 99 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11954, 0.0470148, 1.92032 )
+[node name="crops_leafsStageA" parent="MeshInstance" instance=ExtResource( 99 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11499, 0.0535668, 1.91878 )
 
-[node name="crops_leafsStageA2" parent="." instance=ExtResource( 99 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46488, 0.0470144, -0.266841 )
+[node name="crops_leafsStageA2" parent="MeshInstance" instance=ExtResource( 99 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46033, 0.0535663, -0.268382 )
 
-[node name="crops_leafsStageB" parent="." instance=ExtResource( 100 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16508, 0.0470144, -0.330496 )
+[node name="crops_leafsStageB" parent="MeshInstance" instance=ExtResource( 100 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16053, 0.0535663, -0.332037 )
 
-[node name="crops_wheatStageA" parent="." instance=ExtResource( 86 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.818746, 0.0470144, 0.577978 )
+[node name="crops_wheatStageA" parent="MeshInstance" instance=ExtResource( 86 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.823298, 0.0535663, 0.576437 )
 
-[node name="crops_wheatStageB" parent="." instance=ExtResource( 94 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.492056, 0.0470148, -0.501756 )
+[node name="crops_wheatStageB" parent="MeshInstance" instance=ExtResource( 94 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.496608, 0.0535668, -0.503298 )
 
-[node name="crop_carrot" parent="." instance=ExtResource( 87 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12719, 0.047015, 1.63287 )
+[node name="crop_carrot" parent="MeshInstance" instance=ExtResource( 87 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.13174, 0.0535669, 1.63132 )
 
-[node name="crop_carrot2" parent="." instance=ExtResource( 87 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84569, 0.0470148, 1.84537 )
+[node name="crop_carrot2" parent="MeshInstance" instance=ExtResource( 87 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84114, 0.0535668, 1.84383 )
 
-[node name="crop_melon" parent="." instance=ExtResource( 88 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25744, 0.047015, 0.625776 )
+[node name="crop_melon" parent="MeshInstance" instance=ExtResource( 88 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25289, 0.0535669, 0.624235 )
 
-[node name="crop_pumpkin" parent="." instance=ExtResource( 89 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.263363, 0.0470148, 1.6505 )
+[node name="crop_pumpkin" parent="MeshInstance" instance=ExtResource( 89 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.267914, 0.0535668, 1.64896 )
 
-[node name="crop_turnip" parent="." instance=ExtResource( 101 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54829, 0.0470151, 0.194993 )
+[node name="crop_turnip" parent="MeshInstance" instance=ExtResource( 101 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.54374, 0.053567, 0.193451 )
 
-[node name="fence_bend" parent="." instance=ExtResource( 90 )]
-transform = Transform( 0.944313, 0, 0.329048, 0, 1, 0, -0.329048, 0, 0.944313, -0.21453, 0.0498436, 1.63112 )
+[node name="fence_bend" parent="MeshInstance" instance=ExtResource( 90 )]
+transform = Transform( 0.944313, 0, 0.329048, 0, 1, 0, -0.329048, 0, 0.944313, -0.219082, 0.0563955, 1.62958 )
 
-[node name="flower_purpleA" parent="." instance=ExtResource( 91 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.872577, 0.04527, -3.58863 )
+[node name="flower_purpleA" parent="MeshInstance" instance=ExtResource( 91 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.868025, 0.0518219, -3.59017 )
 
-[node name="flower_purpleB" parent="." instance=ExtResource( 92 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02009, 0.0452697, -3.60792 )
+[node name="flower_purpleB" parent="MeshInstance" instance=ExtResource( 92 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01553, 0.0518216, -3.60946 )
 
-[node name="flower_purpleC" parent="." instance=ExtResource( 95 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.18105, 0.0452697, -3.65271 )
+[node name="flower_purpleC" parent="MeshInstance" instance=ExtResource( 95 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1765, 0.0518216, -3.65425 )
 
-[node name="flower_redA" parent="." instance=ExtResource( 96 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33926, 0.04527, -3.61439 )
+[node name="flower_redA" parent="MeshInstance" instance=ExtResource( 96 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33471, 0.0518219, -3.61593 )
 
-[node name="flower_redB" parent="." instance=ExtResource( 97 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.48606, 0.0452697, -3.61613 )
+[node name="flower_redB" parent="MeshInstance" instance=ExtResource( 97 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.48151, 0.0518216, -3.61767 )
 
-[node name="flower_redC" parent="." instance=ExtResource( 98 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65076, 0.0452697, -3.63187 )
+[node name="flower_redC" parent="MeshInstance" instance=ExtResource( 98 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64621, 0.0518216, -3.63341 )
 
-[node name="flower_yellowA" parent="." instance=ExtResource( 102 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.79939, 0.04527, -3.62825 )
+[node name="flower_yellowA" parent="MeshInstance" instance=ExtResource( 102 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.79483, 0.0518219, -3.6298 )
 
-[node name="flower_yellowB" parent="." instance=ExtResource( 103 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.964116, 0.0452697, -3.43243 )
+[node name="flower_yellowB" parent="MeshInstance" instance=ExtResource( 103 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.959564, 0.0518216, -3.43397 )
 
-[node name="flower_yellowC" parent="." instance=ExtResource( 110 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1406, 0.0452697, -3.48785 )
+[node name="flower_yellowC" parent="MeshInstance" instance=ExtResource( 110 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13604, 0.0518216, -3.48939 )
 
-[node name="grass" parent="." instance=ExtResource( 107 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03275, 0.0452697, -3.52861 )
+[node name="grass" parent="MeshInstance" instance=ExtResource( 107 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0282, 0.0518216, -3.53016 )
 
-[node name="grass2" parent="." instance=ExtResource( 107 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31937, 0.0452697, -3.54399 )
+[node name="grass2" parent="MeshInstance" instance=ExtResource( 107 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31482, 0.0518216, -3.54553 )
 
-[node name="grass3" parent="." instance=ExtResource( 107 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.70192, 0.04527, -3.55039 )
+[node name="grass3" parent="MeshInstance" instance=ExtResource( 107 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.69737, 0.0518219, -3.55193 )
 
-[node name="grass_large" parent="." instance=ExtResource( 109 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.69303, 0.04527, -3.32906 )
+[node name="grass_large" parent="MeshInstance" instance=ExtResource( 109 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68848, 0.0518219, -3.3306 )
 
-[node name="grass_large2" parent="." instance=ExtResource( 109 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.36024, 0.0452697, -3.31687 )
+[node name="grass_large2" parent="MeshInstance" instance=ExtResource( 109 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35569, 0.0518216, -3.31841 )
 
-[node name="grass_large3" parent="." instance=ExtResource( 109 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02388, 0.0452697, -3.29929 )
+[node name="grass_large3" parent="MeshInstance" instance=ExtResource( 109 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01933, 0.0518216, -3.30083 )
 
-[node name="grass_leafs" parent="." instance=ExtResource( 111 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.938173, 0.0452697, -3.08431 )
+[node name="grass_leafs" parent="MeshInstance" instance=ExtResource( 111 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.933621, 0.0518216, -3.08585 )
 
-[node name="grass_leafs2" parent="." instance=ExtResource( 111 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11146, 0.0452697, -3.06813 )
+[node name="grass_leafs2" parent="MeshInstance" instance=ExtResource( 111 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1069, 0.0518216, -3.06967 )
 
-[node name="grass_leafs3" parent="." instance=ExtResource( 111 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31438, 0.0452697, -3.08984 )
+[node name="grass_leafs3" parent="MeshInstance" instance=ExtResource( 111 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.30983, 0.0518216, -3.09138 )
 
-[node name="grass_leafs4" parent="." instance=ExtResource( 111 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5305, 0.04527, -3.12772 )
+[node name="grass_leafs4" parent="MeshInstance" instance=ExtResource( 111 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.52595, 0.0518219, -3.12927 )
 
-[node name="grass_leafs5" parent="." instance=ExtResource( 111 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73974, 0.0452697, -3.14064 )
+[node name="grass_leafs5" parent="MeshInstance" instance=ExtResource( 111 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73519, 0.0518216, -3.14218 )
 
-[node name="grass_leafsLarge" parent="." instance=ExtResource( 104 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02377, 0.0452697, -2.42313 )
+[node name="grass_leafsLarge" parent="MeshInstance" instance=ExtResource( 104 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01922, 0.0518216, -2.42467 )
 
-[node name="grass_leafsLarge2" parent="." instance=ExtResource( 104 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9429, 0.0452695, -2.89733 )
+[node name="grass_leafsLarge2" parent="MeshInstance" instance=ExtResource( 104 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93835, 0.0518214, -2.89887 )
 
-[node name="grass_leafsLarge3" parent="." instance=ExtResource( 104 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08547, 0.0452695, -3.38367 )
+[node name="grass_leafsLarge3" parent="MeshInstance" instance=ExtResource( 104 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08092, 0.0518214, -3.38521 )
 
-[node name="hanging_moss" parent="." instance=ExtResource( 105 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35349, 0.538506, -4.45865 )
+[node name="hanging_moss" parent="MeshInstance" instance=ExtResource( 105 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34894, 0.545058, -4.4602 )
 
-[node name="hanging_moss2" parent="." instance=ExtResource( 105 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53558, 1.17196, -4.49398 )
+[node name="hanging_moss2" parent="MeshInstance" instance=ExtResource( 105 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.53103, 1.17851, -4.49552 )
 
-[node name="lily_large" parent="." instance=ExtResource( 114 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68341, 0.04527, -3.07569 )
+[node name="lily_large" parent="MeshInstance" instance=ExtResource( 114 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.678859, 0.0518219, -3.07723 )
 
-[node name="lily_small" parent="." instance=ExtResource( 106 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.520982, 0.0452697, -2.90717 )
+[node name="lily_small" parent="MeshInstance" instance=ExtResource( 106 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.51643, 0.0518216, -2.90871 )
 
-[node name="log" parent="." instance=ExtResource( 108 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.723292, 0.0452697, -2.51795 )
+[node name="log" parent="MeshInstance" instance=ExtResource( 108 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.71874, 0.0518216, -2.51949 )
 
-[node name="log_large" parent="." instance=ExtResource( 112 )]
-transform = Transform( -0.00399691, 0, -0.999992, 0, 1, 0, 0.999992, 0, -0.00399691, 2.07347, -0.0283694, -3.5246 )
+[node name="log_large" parent="MeshInstance" instance=ExtResource( 112 )]
+transform = Transform( -0.00399691, 0, -0.999992, 0, 1, 0, 0.999992, 0, -0.00399691, 2.06892, -0.0218175, -3.52614 )
 
-[node name="path_wood" parent="." instance=ExtResource( 149 )]
-transform = Transform( 0.900516, -0.434822, 0, 0.434822, 0.900516, 0, 0, 0, 1, 5.04415, 0.726434, 1.22213 )
+[node name="path_wood2" parent="MeshInstance" instance=ExtResource( 149 )]
+transform = Transform( 0.900516, -0.434822, 0, 0.434822, 0.900516, 0, 0, 0, 1, 5.0396, 0.732985, 1.22059 )
 
-[node name="path_wood2" parent="." instance=ExtResource( 149 )]
-transform = Transform( 0.951105, -0.308868, 0, 0.308868, 0.951105, 0, 0, 0, 1, 3.91114, 0.261777, 1.22213 )
+[node name="path_wood3" parent="MeshInstance" instance=ExtResource( 149 )]
+transform = Transform( 0.951105, -0.308868, 0, 0.308868, 0.951105, 0, 0, 0, 1, 3.90659, 0.268329, 1.22059 )
 
-[node name="rock_largeA" parent="." instance=ExtResource( 113 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83431, 0.0434481, 2.77596 )
+[node name="rock_largeA" parent="MeshInstance" instance=ExtResource( 113 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83886, 0.05, 2.77442 )
 
-[node name="rock_largeB" parent="." instance=ExtResource( 127 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.50562, 0.0434471, 2.7494 )
+[node name="rock_largeB" parent="MeshInstance" instance=ExtResource( 127 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51017, 0.0499991, 2.74786 )
 
-[node name="rock_largeC" parent="." instance=ExtResource( 131 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.93171, 0.0434481, 3.44215 )
+[node name="rock_largeC" parent="MeshInstance" instance=ExtResource( 131 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.93626, 0.05, 3.44061 )
 
-[node name="rock_largeD" parent="." instance=ExtResource( 141 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69896, 0.0434486, 3.73296 )
+[node name="rock_largeD" parent="MeshInstance" instance=ExtResource( 141 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.70351, 0.0500005, 3.73142 )
 
-[node name="rock_largeE" parent="." instance=ExtResource( 132 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.93475, 0.0434476, 3.04931 )
+[node name="rock_largeE" parent="MeshInstance" instance=ExtResource( 132 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9393, 0.0499995, 3.04776 )
 
-[node name="rock_largeF" parent="." instance=ExtResource( 116 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58745, 0.0434476, 4.13197 )
+[node name="rock_largeF" parent="MeshInstance" instance=ExtResource( 116 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.592, 0.0499995, 4.13043 )
 
-[node name="rock_smallA" parent="." instance=ExtResource( 137 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.914028, 0.0434481, 4.27893 )
+[node name="rock_smallA" parent="MeshInstance" instance=ExtResource( 137 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.918579, 0.05, 4.27738 )
 
-[node name="rock_smallB" parent="." instance=ExtResource( 128 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.544465, 0.0434481, 4.29443 )
+[node name="rock_smallB" parent="MeshInstance" instance=ExtResource( 128 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.549017, 0.05, 4.29289 )
 
-[node name="rock_smallC" parent="." instance=ExtResource( 117 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15025, 0.0434481, 4.49132 )
+[node name="rock_smallC" parent="MeshInstance" instance=ExtResource( 117 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1548, 0.05, 4.48978 )
 
-[node name="rock_smallD" parent="." instance=ExtResource( 129 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.817904, 0.0511611, 4.61662 )
+[node name="rock_smallD" parent="MeshInstance" instance=ExtResource( 129 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.822455, 0.057713, 4.61508 )
 
-[node name="rock_smallFlatA" parent="." instance=ExtResource( 118 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.191809, 0.0434483, 4.27694 )
+[node name="rock_smallFlatA" parent="MeshInstance" instance=ExtResource( 118 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19636, 0.0500002, 4.2754 )
 
-[node name="rock_smallFlatB" parent="." instance=ExtResource( 136 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.58771, 0.0434476, -1.26224 )
+[node name="rock_smallFlatB" parent="MeshInstance" instance=ExtResource( 136 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.59226, 0.0499995, -1.26379 )
 
-[node name="rock_smallFlatC" parent="." instance=ExtResource( 140 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8347, 0.0434481, -1.55247 )
+[node name="rock_smallFlatC" parent="MeshInstance" instance=ExtResource( 140 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83925, 0.05, -1.55401 )
 
-[node name="rock_smallG" parent="." instance=ExtResource( 125 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.30939, 0.0434478, -1.79837 )
+[node name="rock_smallG" parent="MeshInstance" instance=ExtResource( 125 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.31394, 0.0499998, -1.79991 )
 
-[node name="rock_smallH" parent="." instance=ExtResource( 142 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6296, 0.0434481, -2.0515 )
+[node name="rock_smallH" parent="MeshInstance" instance=ExtResource( 142 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.63415, 0.05, -2.05304 )
 
-[node name="rock_smallI" parent="." instance=ExtResource( 123 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.72316, 0.0434478, -1.68588 )
+[node name="rock_smallI" parent="MeshInstance" instance=ExtResource( 123 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.72771, 0.0499998, -1.68742 )
 
-[node name="rock_smallTopA" parent="." instance=ExtResource( 124 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97259, 0.0434476, -1.40085 )
+[node name="rock_smallTopA" parent="MeshInstance" instance=ExtResource( 124 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.97714, 0.0499995, -1.40239 )
 
-[node name="rock_smallTopB" parent="." instance=ExtResource( 121 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51294, 0.0434476, -1.27858 )
+[node name="rock_smallTopB" parent="MeshInstance" instance=ExtResource( 121 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5175, 0.0499995, -1.28012 )
 
-[node name="rock_tallA" parent="." instance=ExtResource( 133 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.26317, 0.0434481, -1.02931 )
+[node name="rock_tallA" parent="MeshInstance" instance=ExtResource( 133 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.26772, 0.05, -1.03085 )
 
-[node name="rock_tallB" parent="." instance=ExtResource( 139 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.62126, 0.0434479, -0.500781 )
+[node name="rock_tallB" parent="MeshInstance" instance=ExtResource( 139 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.62581, 0.0499998, -0.502322 )
 
-[node name="rock_tallC" parent="." instance=ExtResource( 115 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.08445, 0.0434481, -0.593749 )
+[node name="rock_tallC" parent="MeshInstance" instance=ExtResource( 115 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.089, 0.05, -0.59529 )
 
-[node name="rock_tallD" parent="." instance=ExtResource( 135 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39896, 0.0434479, -0.264876 )
+[node name="rock_tallD" parent="MeshInstance" instance=ExtResource( 135 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.40351, 0.0499998, -0.266418 )
 
-[node name="rock_tallE" parent="." instance=ExtResource( 130 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.78822, 0.0434476, -0.0578708 )
+[node name="rock_tallE" parent="MeshInstance" instance=ExtResource( 130 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.79278, 0.0499995, -0.0594123 )
 
-[node name="rock_tallF" parent="." instance=ExtResource( 122 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98474, 0.0434486, -0.468794 )
+[node name="rock_tallF" parent="MeshInstance" instance=ExtResource( 122 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.98929, 0.0500005, -0.470335 )
 
-[node name="rock_tallG" parent="." instance=ExtResource( 119 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51746, 0.0434486, -0.690519 )
+[node name="rock_tallG" parent="MeshInstance" instance=ExtResource( 119 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.52201, 0.0500005, -0.69206 )
 
-[node name="rock_tallH" parent="." instance=ExtResource( 126 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87781, 0.0434481, -1.04838 )
+[node name="rock_tallH" parent="MeshInstance" instance=ExtResource( 126 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.88236, 0.05, -1.04992 )
 
-[node name="rock_tallI" parent="." instance=ExtResource( 120 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.88376, 0.0434479, -0.420168 )
+[node name="rock_tallI" parent="MeshInstance" instance=ExtResource( 120 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.88831, 0.0499998, -0.42171 )
 
-[node name="rock_tallJ" parent="." instance=ExtResource( 138 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27537, 0.0434479, -0.313616 )
+[node name="rock_tallJ" parent="MeshInstance" instance=ExtResource( 138 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.27992, 0.0499998, -0.315157 )
 
-[node name="sign" parent="." instance=ExtResource( 134 )]
-transform = Transform( -0.990922, 0, 0.134436, 0, 1, 0, -0.134436, 0, -0.990922, -2.95493, 0.0434479, 0.603351 )
+[node name="sign" parent="MeshInstance" instance=ExtResource( 134 )]
+transform = Transform( -0.990922, 0, 0.134436, 0, 1, 0, -0.134436, 0, -0.990922, -2.95948, 0.0499998, 0.601809 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.0841699, 0.2896, -0.95344, 0.0254669, 0.957148, 0.288478, 0.996126, -1.85543e-09, -0.0879382, -6.62844, 5.41629, 0 )
@@ -858,3 +859,9 @@ shadow_reverse_cull_face = true
 transform = Transform( 0.727569, 0.411507, -0.548913, 0, 0.800125, 0.599834, 0.686034, -0.436421, 0.582146, -1.08599, 3.11416, 3.39493 )
 fov = 68.2
 near = 1.36
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 184 )
+volume_db = -26.252
+autoplay = true
+mix_target = 1

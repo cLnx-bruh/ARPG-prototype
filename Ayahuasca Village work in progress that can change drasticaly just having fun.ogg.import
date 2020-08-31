@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ayahuasca Village work in progress that can change drasticaly just having fun.ogg-13aedffcbb0e1d5cedb77d33dccaa0ff.oggstr"
+
+[deps]
+
+source_file="res://Ayahuasca Village work in progress that can change drasticaly just having fun.ogg"
+dest_files=[ "res://.import/Ayahuasca Village work in progress that can change drasticaly just having fun.ogg-13aedffcbb0e1d5cedb77d33dccaa0ff.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ayahuasca Village.ogg-1909f1f63b5e2b2735548e7e697aa538.oggstr"
+
+[deps]
+
+source_file="res://Ayahuasca Village.ogg"
+dest_files=[ "res://.import/Ayahuasca Village.ogg-1909f1f63b5e2b2735548e7e697aa538.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

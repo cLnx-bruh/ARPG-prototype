@@ -22,4 +22,5 @@ config/icon="res://icon.png"
 [rendering]
 
 quality/subsurface_scattering/quality=2
+quality/filters/msaa=4
 environment/default_environment="res://default_env.tres"

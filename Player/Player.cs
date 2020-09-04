@@ -29,7 +29,9 @@ public class Player : KinematicBody
     private Spatial cameraPivot;
     private Camera camera;
 
-    private MeshInstance mesh;
+    private Spatial mesh;
+
+    private AnimationTree animationTree;
 
 
     // Called when the node enters the scene tree for the first time.
@@ -37,7 +39,8 @@ public class Player : KinematicBody
     {
         this.cameraPivot = FindNode("CameraPivot", true, true) as Spatial;
         this.camera = FindNode("Camera", true, true) as Camera;
-        this.mesh = FindNode("MeshInstance", true, true) as MeshInstance;
+        this.mesh = FindNode("MeshInstance", true, true) as Spatial;
+        this.animationTree = FindNode("AnimationTree", true, true) as AnimationTree;
 
         Input.SetMouseMode(Input.MouseMode.Captured);
     }
@@ -77,7 +80,7 @@ public class Player : KinematicBody
         float horizontal = Input.GetActionStrength("move_right") - Input.GetActionStrength("move_left");
         float forward = Input.GetActionStrength("move_backward") - Input.GetActionStrength("move_forward");
 
-        Vector3 inputDirection = new Vector3(horizontal, 0, forward).Normalized();
+        Vector3 inputDirection = new Vector3(horizontal, 0, forward);
 
         this.mesh.RotationDegrees = Vector3.Zero;
         if (inputDirection.z != 0)
@@ -90,7 +93,7 @@ public class Player : KinematicBody
                 this.mesh.RotationDegrees = new Vector3(0, -newYDegrees, 0);
             }
         }
-        Vector3 localDirection = inputDirection.Rotated(Vector3.Up, this.Rotation.y);
+        Vector3 localDirection = inputDirection.Normalized().Rotated(Vector3.Up, this.Rotation.y);
 
         Vector3 velocity = Vector3.Zero;
         if (localDirection.Length() > 0.1f)
@@ -111,5 +114,7 @@ public class Player : KinematicBody
 
         velocity.y = yVelicity;
         this.velocity = this.MoveAndSlide(velocity, Vector3.Up);
+
+        this.animationTree.Set("parameters/BlendSpace2D/blend_position", new Vector2(inputDirection.x, inputDirection.z));
     }
 }

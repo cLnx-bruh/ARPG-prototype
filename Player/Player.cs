@@ -37,6 +37,8 @@ public class Player : KinematicBody
 
     private AnimationTree animationTree;
 
+    private AnimationPlayer animationPlayer;
+
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
@@ -45,6 +47,7 @@ public class Player : KinematicBody
         this.camera = FindNode("Camera", true, true) as Camera;
         this.armature = FindNode("Armature", true, true) as Spatial;
         this.animationTree = FindNode("AnimationTree", true, true) as AnimationTree;
+        this.animationPlayer = FindNode("AnimationPlayer", true, true) as AnimationPlayer;
 
         Input.SetMouseMode(Input.MouseMode.Captured);
     }
@@ -66,6 +69,10 @@ public class Player : KinematicBody
             }
 
             this.showCursor = !this.showCursor;
+        }
+
+        if (Input.IsMouseButtonPressed(1) && !this.IsAttacking()) {
+            this.StartAttacking();
         }
     }
 
@@ -153,5 +160,17 @@ public class Player : KinematicBody
         float forward = Input.GetActionStrength("move_backward") - Input.GetActionStrength("move_forward");
 
         return new Vector3(horizontal, 0, forward);
+    }
+
+    private bool IsAttacking() {
+        return  (bool) this.animationTree.Get("parameters/OneShot/active");
+    }
+
+    private void StartAttacking() {
+        this.animationTree.Set("parameters/OneShot/active", true);
+    }
+
+    public void StopAttacking() {
+        this.animationTree.Set("parameters/OneShot/active", false);
     }
 }

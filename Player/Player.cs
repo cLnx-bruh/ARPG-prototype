@@ -49,12 +49,23 @@ public class Player : KinematicBody
         Input.SetMouseMode(Input.MouseMode.Captured);
     }
 
+    bool showCursor = true;
+
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(float delta)
     {
         if (Input.IsActionJustPressed("ui_cancel"))
         {
-            Input.SetMouseMode(Input.MouseMode.Visible);
+            if (this.showCursor)
+            {
+                Input.SetMouseMode(Input.MouseMode.Visible);
+            }
+            else
+            {
+                Input.SetMouseMode(Input.MouseMode.Captured);
+            }
+
+            this.showCursor = !this.showCursor;
         }
     }
 
@@ -87,7 +98,7 @@ public class Player : KinematicBody
         Vector3 velocity = Vector3.Zero;
 
         Vector3 localDirection = inputDirection.Normalized().Rotated(Vector3.Up, this.Rotation.y);
-       
+
         if (localDirection.Length() > 0.1f)
         {
             float acceleration = this.IsOnFloor() ? this.groundAcceleration : this.airAcceleration;
@@ -112,7 +123,8 @@ public class Player : KinematicBody
         this.velocity = this.MoveAndSlide(velocity, Vector3.Up);
     }
 
-    private void HandleDiagonalRotation(Vector3 inputDirection, float delta) {
+    private void HandleDiagonalRotation(Vector3 inputDirection, float delta)
+    {
         int diagonalDirection = Math.Sign(inputDirection.x) * Math.Sign(inputDirection.z);
         if (diagonalDirection != 0)
         {
@@ -127,14 +139,16 @@ public class Player : KinematicBody
         }
     }
 
-    private void HandleAnimations(Vector3 inputDirection, float delta) {
+    private void HandleAnimations(Vector3 inputDirection, float delta)
+    {
         Vector2 currentBlend = (Vector2)this.animationTree.Get("parameters/BlendSpace2D/blend_position");
         Vector2 blendDirection = new Vector2(inputDirection.x, inputDirection.z);
         Vector2 newBlend = currentBlend.LinearInterpolate(blendDirection, 10 * delta);
         this.animationTree.Set("parameters/BlendSpace2D/blend_position", newBlend);
     }
 
-    private Vector3 GetInputDirection() {
+    private Vector3 GetInputDirection()
+    {
         float horizontal = Input.GetActionStrength("move_right") - Input.GetActionStrength("move_left");
         float forward = Input.GetActionStrength("move_backward") - Input.GetActionStrength("move_forward");
 

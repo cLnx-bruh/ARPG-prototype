@@ -85,9 +85,9 @@ public class Player : KinematicBody
         this.mesh.RotationDegrees = Vector3.Zero;
         if (inputDirection.z != 0)
         {
-            int forwardDiagonalDirection = Math.Sign(inputDirection.x) * -Math.Sign(inputDirection.z) * 1;
+            int forwardDiagonalDirection = Math.Sign(inputDirection.x) * Math.Sign(inputDirection.z);
 
-            float newYDegrees = this.mesh.RotationDegrees.z - 45f * -forwardDiagonalDirection;
+            float newYDegrees = this.mesh.RotationDegrees.y - 45f * forwardDiagonalDirection;
             if (Mathf.Abs(0 - newYDegrees) <= 45f)
             {
                 this.mesh.RotationDegrees = new Vector3(0, -newYDegrees, 0);
@@ -115,6 +115,9 @@ public class Player : KinematicBody
         velocity.y = yVelicity;
         this.velocity = this.MoveAndSlide(velocity, Vector3.Up);
 
-        this.animationTree.Set("parameters/BlendSpace2D/blend_position", new Vector2(inputDirection.x, inputDirection.z));
+        Vector2 currentBlend = (Vector2) this.animationTree.Get("parameters/BlendSpace2D/blend_position");
+        Vector2 blendDirection = new Vector2(inputDirection.x, inputDirection.z);
+        Vector2 newBlend = currentBlend.LinearInterpolate(blendDirection, 10 * delta);
+        this.animationTree.Set("parameters/BlendSpace2D/blend_position", newBlend);
     }
 }

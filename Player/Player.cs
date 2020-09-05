@@ -3,12 +3,16 @@ using System;
 
 public class Player : KinematicBody
 {
+    private readonly float DIAGONAL_TURN_ANGLE = 45f;
+
     [Export]
     private float speed = 20f;
     [Export]
     private float groundAcceleration = 15f;
     [Export]
     private float airAcceleration = 5f;
+    [Export]
+    private float diagonalTurnRate = 5f;
     [Export]
     private float gravity = 0.98f;
     [Export]
@@ -29,7 +33,7 @@ public class Player : KinematicBody
     private Spatial cameraPivot;
     private Camera camera;
 
-    private Spatial mesh;
+    private Spatial armature;
 
     private AnimationTree animationTree;
 
@@ -39,7 +43,7 @@ public class Player : KinematicBody
     {
         this.cameraPivot = FindNode("CameraPivot", true, true) as Spatial;
         this.camera = FindNode("Camera", true, true) as Camera;
-        this.mesh = FindNode("MeshInstance", true, true) as Spatial;
+        this.armature = FindNode("Armature", true, true) as Spatial;
         this.animationTree = FindNode("AnimationTree", true, true) as AnimationTree;
 
         Input.SetMouseMode(Input.MouseMode.Captured);
@@ -56,7 +60,10 @@ public class Player : KinematicBody
 
     public override void _PhysicsProcess(float delta)
     {
-        this.HandleMovement(delta);
+        Vector3 inputDirection = this.GetInputDirection();
+        this.HandleDiagonalRotation(inputDirection, delta);
+        this.HandleMovement(inputDirection, delta);
+        this.HandleAnimations(inputDirection, delta);
     }
 
     public override void _Input(InputEvent @event)
@@ -75,49 +82,62 @@ public class Player : KinematicBody
         this.cameraPivot.RotationDegrees = new Vector3(cameraPivotXRotationDegree, 0, 0);
     }
 
-    private void HandleMovement(float delta)
+    private void HandleMovement(Vector3 inputDirection, float delta)
     {
-        float horizontal = Input.GetActionStrength("move_right") - Input.GetActionStrength("move_left");
-        float forward = Input.GetActionStrength("move_backward") - Input.GetActionStrength("move_forward");
-
-        Vector3 inputDirection = new Vector3(horizontal, 0, forward);
-
-        this.mesh.RotationDegrees = Vector3.Zero;
-        if (inputDirection.z != 0)
-        {
-            int forwardDiagonalDirection = Math.Sign(inputDirection.x) * Math.Sign(inputDirection.z);
-
-            float newYDegrees = this.mesh.RotationDegrees.y - 45f * forwardDiagonalDirection;
-            if (Mathf.Abs(0 - newYDegrees) <= 45f)
-            {
-                this.mesh.RotationDegrees = new Vector3(0, -newYDegrees, 0);
-            }
-        }
-        Vector3 localDirection = inputDirection.Normalized().Rotated(Vector3.Up, this.Rotation.y);
-
         Vector3 velocity = Vector3.Zero;
+
+        Vector3 localDirection = inputDirection.Normalized().Rotated(Vector3.Up, this.Rotation.y);
+       
         if (localDirection.Length() > 0.1f)
         {
-            float acceleration = this.IsOnFloor()? this.groundAcceleration : this.airAcceleration;
+            float acceleration = this.IsOnFloor() ? this.groundAcceleration : this.airAcceleration;
             velocity = this.velocity.LinearInterpolate(localDirection * speed, acceleration * delta);
         }
 
-        if (this.IsOnFloor()) {
-            this.yVelicity = -0.01f; 
-        } else {
+        if (this.IsOnFloor())
+        {
+            this.yVelicity = -0.01f;
+        }
+        else
+        {
             this.yVelicity = Mathf.Clamp(this.yVelicity - this.gravity, -this.maxTerminalVelocity, this.maxTerminalVelocity);
         }
 
-        if (Input.IsActionJustPressed("jump") && this.IsOnFloor()) {
+        if (Input.IsActionJustPressed("jump") && this.IsOnFloor())
+        {
             yVelicity = jumpPower;
         }
 
         velocity.y = yVelicity;
         this.velocity = this.MoveAndSlide(velocity, Vector3.Up);
+    }
 
-        Vector2 currentBlend = (Vector2) this.animationTree.Get("parameters/BlendSpace2D/blend_position");
+    private void HandleDiagonalRotation(Vector3 inputDirection, float delta) {
+        int diagonalDirection = Math.Sign(inputDirection.x) * Math.Sign(inputDirection.z);
+        if (diagonalDirection != 0)
+        {
+            Vector3 desiredRotation = new Vector3(0, diagonalDirection * DIAGONAL_TURN_ANGLE, 0);
+            Vector3 newROtation = this.armature.RotationDegrees.LinearInterpolate(desiredRotation, this.diagonalTurnRate * delta);
+            this.armature.RotationDegrees = newROtation;
+        }
+        else if (this.armature.RotationDegrees.y != 0)
+        {
+            Vector3 newRotation = this.armature.RotationDegrees.LinearInterpolate(Vector3.Zero, this.diagonalTurnRate * delta);
+            this.armature.RotationDegrees = newRotation;
+        }
+    }
+
+    private void HandleAnimations(Vector3 inputDirection, float delta) {
+        Vector2 currentBlend = (Vector2)this.animationTree.Get("parameters/BlendSpace2D/blend_position");
         Vector2 blendDirection = new Vector2(inputDirection.x, inputDirection.z);
         Vector2 newBlend = currentBlend.LinearInterpolate(blendDirection, 10 * delta);
         this.animationTree.Set("parameters/BlendSpace2D/blend_position", newBlend);
+    }
+
+    private Vector3 GetInputDirection() {
+        float horizontal = Input.GetActionStrength("move_right") - Input.GetActionStrength("move_left");
+        float forward = Input.GetActionStrength("move_backward") - Input.GetActionStrength("move_forward");
+
+        return new Vector3(horizontal, 0, forward);
     }
 }

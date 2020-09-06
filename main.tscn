@@ -151,6 +151,7 @@
 [ext_resource path="res://Scenes/stump_square.tscn" type="PackedScene" id=183]
 [ext_resource path="res://Ayahuasca Village.ogg" type="AudioStream" id=184]
 
+
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0.0588235, 0.917647, 0.513726, 1 )
 

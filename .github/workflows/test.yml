@@ -1,0 +1,38 @@
+name: RUN
+
+on: [workflow_dispatch]
+
+env:
+  RAD12REGISTRY: ""
+
+jobs:
+  rad12deploy:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Retrieve docker login
+        run: mkdir ~/.docker/ && cp .rad12/config.json ~/.docker/
+
+      - name: Build image
+        run: docker build . -t ${RAD12REGISTRY}/app:latest
+
+      - name: Push image to registry
+        run: docker push ${RAD12REGISTRY}/app:latest
+
+      - name: INSTALL KUBECTL (REMOVE ON GITHUB)
+        run: curl -sLO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" && install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+      - name: Gerate deployment descriptor
+        run: if [[ ! -d desc ]]; then mkdir desc; fi && echo -e "---\n""apiVersion"':'" apps/v1\n""kind"':'" Deployment\n""metadata"':\n'"  name"':'" app\n""  labels"':\n'"    app"':'" app\n""spec"':\n'"  replicas"':'" 1\n""  selector"':\n'"    matchLabels"':\n'"      app"':'" app\n""  template"':\n'"    metadata"':\n'"      labels"':\n'"        app"':'" app\n""    spec"':\n'"      imagePullSecrets"':\n'"        - name"':'" rad12registry\n""      containers"':\n'"        - name"':'" app\n""          image"':'" ${RAD12REGISTRY}/app:latest\n""          imagePullPolicy"':'" Always\n""          envFrom"':\n'"            - secretRef"':\n'"                name"':'" app-secrets\n" > desc/Deployment.yml
+
+      - name: Gerate service descriptor
+        run: if [[ "$(grep 'EXPOSE ' Dockerfile)" != "" ]]; then echo -e "---\n""apiVersion"':'" v1\n""kind"':'" Service\n""metadata"':'"\n""  name"':'" app\n""  labels"':'"\n""    app"':'" app\n""spec"':'"\n""  ports"':' > desc/Service.yml; for port in $(grep EXPOSE Dockerfile | awk '{print $2}'); do echo -e "    - name"':'" tcp-${port}\n""      protocol"':'" TCP\n""      port"':'" ${port}\n""      targetPort"':'" ${port}"; done >> desc/Service.yml; echo -e "  selector"':'"\n""    app"':'" app\n""  type"':'" NodePort" >> desc/Service.yml; fi
+
+      - name: Apply all manifests
+        run: for desc in desc/*; do kubectl --kubeconfig=.rad12/kubeconfig apply -f ${desc}; done
+
+      - name: Perform service rolling update
+        run: kubectl --kubeconfig=.rad12/kubeconfig rollout restart deploy app

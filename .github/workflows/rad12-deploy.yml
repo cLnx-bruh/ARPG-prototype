@@ -1,0 +1,48 @@
+name: run
+
+on: [workflow_dispatch]
+
+env:
+  RAD12REGISTRY: "cLnx-bruh-xgu2c0kt.rad12.io:40176"
+
+jobs:
+  run:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Retrieve Docker login for Rad12 private registry
+        run: echo "${DOCKERCONFIGJSON}" > ~/.docker/config.json
+        env:
+          DOCKERCONFIGJSON: ${{ secrets.DOCKERCONFIGJSON }}
+
+      - name: Build image
+        run: docker build . -t ${RAD12REGISTRY}/app:latest
+
+      - name: Push image to registry
+        run: docker push ${RAD12REGISTRY}/app:latest
+
+      - name: Retrieve Rad12 kubeconfig from secrets
+        run: mkdir /opt/rad12 && echo "${KUBECONFIG}" > /opt/rad12/kubeconfig
+        env:
+          KUBECONFIG: ${{ secrets.KUBECONFIG }}
+
+      - name: Create user secrets on Rad12 Kubernetes
+        run: kubectl --insecure-skip-tls-verify --kubeconfig=/opt/rad12/kubeconfig create secret generic app-secrets --from-literal=BRAVO="${{ secrets.BRAVO }}" --from-literal=DOCKERCONFIGJSON="${{ secrets.DOCKERCONFIGJSON }}" --from-literal=JEBAGA="${{ secrets.JEBAGA }}" --from-literal=KUBECONFIG="${{ secrets.KUBECONFIG }}" --from-literal=TEST="${{ secrets.TEST }}" 
+
+      - name: Generate K8s Deployment descriptor
+        run: if [[ ! -d desc ]]; then mkdir desc; fi && echo -e "---\n""apiVersion"':'" apps/v1\n""kind"':'" Deployment\n""metadata"':\n'"  name"':'" app\n""  labels"':\n'"    app"':'" app\n""spec"':\n'"  replicas"':'" 1\n""  selector"':\n'"    matchLabels"':\n'"      app"':'" app\n""  template"':\n'"    metadata"':\n'"      labels"':\n'"        app"':'" app\n""    spec"':\n'"      imagePullSecrets"':\n'"        - name"':'" rad12registry\n""      containers"':\n'"        - name"':'" app\n""          image"':'" ${RAD12REGISTRY}/app:latest\n""          imagePullPolicy"':'" Always\n""          envFrom"':\n'"            - secretRef"':\n'"                name"':'" app-secrets\n" > desc/Deployment.yml
+
+      - name: Generate K8s Service descriptor
+        run: if [[ "$(grep 'EXPOSE ' Dockerfile)" != "" ]]; then echo -e "---\n""apiVersion"':'" v1\n""kind"':'" Service\n""metadata"':'"\n""  name"':'" app\n""  labels"':'"\n""    app"':'" app\n""spec"':'"\n""  ports"':' > desc/Service.yml; for port in $(grep EXPOSE Dockerfile | awk '{print $2}'); do echo -e "    - name"':'" tcp-${port}\n""      protocol"':'" TCP\n""      port"':'" ${port}\n""      targetPort"':'" ${port}"; done >> desc/Service.yml; echo -e "  selector"':'"\n""    app"':'" app\n" >> desc/Service.yml; fi
+
+      - name: Generage K8s Ingress descriptor
+        run: if [[ "$(grep 'EXPOSE ' Dockerfile)" != "" ]]; then port=$(grep EXPOSE Dockerfile | head -1 | awk '{print $2}'); echo -e "---\n""apiVersion"':'" networking.k8s.io/v1\n""kind"':'" Ingress\n""metadata"':'"\n""  name"':'" nginx\n""  annotations"':'"\n""    ingress.kubernetes.io/ssl-redirect"':'" '"'true'"'\n""spec"':'"\n""  tls"':'"\n""  - hosts"':'"\n""    - cLnx-bruh-xgu2c0kt.rad12.io\n""    secretName"':'" rad12-tls\n""  rules"':'"\n""  - http"':'"\n""      paths"':'"\n""      - path"':'" /\n""        pathType"':'" Prefix\n""        backend"':'"\n""          service"':'"\n""            name"':'" app\n""            port"':'"\n""              number"':'" ${port}\n" >> desc/Ingress.yml; fi
+
+      - name: Apply all manifests
+        run: for desc in desc/*; do kubectl --insecure-skip-tls-verify --kubeconfig=/opt/rad12/kubeconfig apply -f ${desc}; done
+
+      - name: Perform service rolling update
+        run: kubectl --insecure-skip-tls-verify --kubeconfig=/opt/rad12/kubeconfig rollout restart deploy app
